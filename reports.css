@@ -1,0 +1,1654 @@
+/* ==========================================================
+   REPORTS PAGE
+========================================================== */
+
+#reportsPage{
+    padding:16px;
+    padding-bottom:90px;
+    box-sizing:border-box;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+#reportsPage .reports-header{
+    margin-bottom:18px;
+}
+
+#reportsPage .reports-header h2{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
+    color:#FFFFFF;
+}
+
+#reportsPage .reports-header p{
+    margin:4px 0 0;
+    font-size:13px;
+    color:#9A9A9A;
+}
+
+
+/* ==========================================================
+   TOOLBAR
+========================================================== */
+
+#reportsPage .report-toolbar{
+    position:relative;
+
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 105px;
+
+    gap:10px;
+
+    margin-bottom:20px;
+}
+
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+#reportsPage .report-search{
+    position:relative;
+    width:100%;
+}
+
+#reportsPage .report-search i{
+    position:absolute;
+
+    left:14px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#8A8A8A;
+    font-size:14px;
+
+    pointer-events:none;
+}
+
+#reportsPage .report-search input{
+    width:100%;
+    height:44px;
+
+    padding:0 14px 0 42px;
+
+    box-sizing:border-box;
+
+    border:1px solid #2E2E2E;
+    border-radius:12px;
+
+    background:#1A1A1A;
+    color:#FFFFFF;
+
+    font-family:inherit;
+    font-size:14px;
+
+    outline:none;
+}
+
+#reportsPage .report-search input:focus{
+    border-color:#3A3A3A;
+}
+
+#reportsPage .report-search input::placeholder{
+    color:#777777;
+}
+
+
+/* ==========================================================
+   FILTER BUTTON
+========================================================== */
+
+#reportsPage #reportFilterBtn{
+    width:100%;
+    height:44px;
+
+    margin:0;
+    padding:0 12px;
+
+    box-sizing:border-box;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+    border:1px solid #333333;
+    border-radius:12px;
+
+    background:#252525;
+    color:#FFFFFF;
+
+    font-family:inherit;
+    font-size:12px;
+    font-weight:600;
+
+    cursor:pointer;
+    outline:none;
+}
+
+#reportsPage #reportFilterBtn i{
+    color:#FFFFFF;
+}
+
+#reportsPage #reportFilterBtn span{
+    color:#FFFFFF;
+}
+
+#reportsPage #reportFilterBtn:hover{
+    background:#2B2B2B;
+}
+
+
+/* ==========================================================
+   FILTER PANEL
+========================================================== */
+
+#reportsPage .report-filter-panel{
+    position:absolute;
+
+    top:calc(100% + 8px);
+    right:0;
+
+    width:220px;
+
+    margin:0;
+    padding:10px;
+
+    box-sizing:border-box;
+
+    background:#1F1F1F;
+
+    border:1px solid #303030;
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    z-index:9999;
+}
+
+#reportsPage .report-filter-panel.show{
+    display:flex;
+}
+
+
+/* ==========================================================
+   FILTER GROUP
+========================================================== */
+
+#reportsPage .report-filter-group{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+
+/* ==========================================================
+   FILTER SELECT
+========================================================== */
+
+#reportsPage .report-filter-group select{
+    width:100%;
+    height:42px;
+
+    margin:0;
+    padding:0 12px;
+
+    box-sizing:border-box;
+
+    border:1px solid #333333;
+    border-radius:10px;
+
+    background:#181818;
+    color:#FFFFFF;
+
+    font-family:inherit;
+    font-size:13px;
+    font-weight:500;
+
+    outline:none;
+
+    color-scheme:dark;
+}
+
+#reportsPage .report-filter-group select:focus{
+    border-color:#444444;
+}
+
+#reportsPage .report-filter-group select option{
+    background:#181818;
+    color:#FFFFFF;
+}
+
+
+/* ==========================================================
+   REPORT LIST
+========================================================== */
+
+#reportsPage .report-list{
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:14px;
+}
+
+
+/* ==========================================================
+   REPORTS EMPTY STATE
+========================================================== */
+
+#reportsPage .reports-empty-state{
+    width:100%;
+    min-height:220px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    box-sizing:border-box;
+
+    padding:40px 20px;
+
+    background:transparent;
+
+    border:none;
+    box-shadow:none;
+
+    color:#9CA3AF;
+}
+
+
+/* ==========================================================
+   EMPTY FOLDER ICON
+========================================================== */
+
+#reportsPage .reports-empty-state i{
+    display:block;
+
+    font-size:52px;
+    line-height:1;
+
+    margin-bottom:16px;
+
+    color:#6B7280;
+}
+
+
+/* ==========================================================
+   EMPTY MESSAGE
+========================================================== */
+
+#reportsPage .reports-empty-state span{
+    display:block;
+
+    color:#9CA3AF;
+
+    font-size:14px;
+    font-weight:500;
+
+    line-height:1.5;
+}
+
+
+/* ==========================================================
+   REPORT CARD
+========================================================== */
+
+#reportsPage .report-card{
+    margin-top:0;
+    padding:16px;
+
+    box-sizing:border-box;
+
+    background:#1F1F1F;
+
+    border:1px solid #2E2E2E;
+    border-radius:18px;
+}
+
+
+/* ==========================================================
+   REPORT CARD HEADER
+========================================================== */
+
+#reportsPage .report-card-header{
+    display:flex;
+
+    justify-content:space-between;
+    align-items:flex-start;
+
+    margin-bottom:14px;
+}
+
+#reportsPage .report-card-header h3{
+    margin:0;
+
+    font-size:17px;
+    font-weight:700;
+
+    color:#FFFFFF;
+}
+
+#reportsPage .report-card-header span{
+    font-size:12px;
+    color:#8A8A8A;
+}
+
+#reportsPage .report-gencon{
+    margin-top:4px;
+
+    font-size:12px;
+    color:#A0A0A0;
+}
+
+
+/* ==========================================================
+   REPORT TABLE
+========================================================== */
+
+#reportsPage .report-table{
+    width:100%;
+
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+
+#reportsPage .report-table th,
+#reportsPage .report-table td{
+    padding:9px 6px;
+
+    vertical-align:middle;
+
+    box-sizing:border-box;
+}
+
+#reportsPage .report-table th{
+    text-align:left;
+
+    font-size:12px;
+    font-weight:600;
+
+    color:#8A8A8A;
+
+    border-bottom:1px solid #333333;
+}
+
+#reportsPage .report-table td{
+    font-size:13px;
+
+    color:#FFFFFF;
+
+    border-bottom:1px solid #2B2B2B;
+}
+
+
+/* ==========================================================
+   TABLE COLUMN WIDTH
+========================================================== */
+
+#reportsPage .report-table th:first-child,
+#reportsPage .report-table td:first-child{
+    width:25%;
+    padding-left:0;
+}
+
+#reportsPage .report-table th:nth-child(2),
+#reportsPage .report-table td:nth-child(2){
+    width:30%;
+}
+
+#reportsPage .report-table th:nth-child(3),
+#reportsPage .report-table td:nth-child(3){
+    width:20%;
+}
+
+#reportsPage .report-table th:last-child,
+#reportsPage .report-table td:last-child{
+    width:25%;
+    padding-right:0;
+}
+
+
+/* ==========================================================
+   MARK AS PAID BUTTON
+========================================================== */
+
+#reportsPage .report-table button,
+#reportsPage .mark-paid-row-btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-width:78px;
+    height:34px;
+
+    padding:0 9px;
+
+    box-sizing:border-box;
+
+    border:none !important;
+    border-radius:9px !important;
+
+    background:#D4AF37 !important;
+    color:#111111 !important;
+
+    font-family:inherit;
+    font-size:10px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    appearance:none;
+    -webkit-appearance:none;
+}
+
+#reportsPage .report-table button:hover,
+#reportsPage .mark-paid-row-btn:hover{
+    background:#C9A52F !important;
+    color:#111111 !important;
+
+    opacity:.95;
+}
+
+
+/* ==========================================================
+   UNDO PAID
+========================================================== */
+
+#reportsPage .undo-paid-btn{
+    width:100%;
+    height:40px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#1E4D2B !important;
+    color:#7CFF9D !important;
+
+    font-family:inherit;
+    font-size:12px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+#reportsPage .undo-paid-btn:hover{
+    opacity:.9;
+}
+
+
+/* ==========================================================
+   SUBTOTAL
+========================================================== */
+
+#reportsPage .report-subtotal{
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    margin-top:6px;
+
+    font-size:14px;
+    font-weight:700;
+
+    color:#FFFFFF;
+}
+
+
+/* ==========================================================
+   COMPLETED
+========================================================== */
+
+#reportsPage .report-completed{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    height:46px;
+
+    margin-top:14px;
+
+    background:#1E4D2B;
+
+    border:1px solid #2D8A4F;
+    border-radius:14px;
+
+    font-size:14px;
+    font-weight:700;
+
+    color:#7CFF9D;
+}
+
+
+/* ==========================================================
+   GRAND TOTAL
+========================================================== */
+
+#reportsPage .report-grand-total{
+    margin-top:20px;
+    padding:16px;
+
+    background:#1A1A1A;
+
+    border:1px solid #D4AF37;
+    border-radius:18px;
+
+    box-sizing:border-box;
+}
+
+#reportsPage .report-grand-total h3{
+    margin:0 0 14px;
+
+    font-size:17px;
+    font-weight:700;
+
+    color:#D4AF37;
+}
+
+#reportsPage .report-grand-total .row{
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    font-size:14px;
+
+    color:#FFFFFF;
+}
+
+
+/* ==========================================================
+   REPORT SUMMARY CARD
+========================================================== */
+
+#reportsPage .report-summary-card{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    background:#1F1F1F;
+
+    border:1px solid #2D2D2D;
+    border-radius:18px;
+
+    padding:12px;
+
+    margin:0;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    position:relative;
+
+}
+
+
+/* ==========================================================
+   SUMMARY TOP
+========================================================== */
+
+#reportsPage .report-summary-top{
+
+    width:100%;
+
+    min-height:72px;
+
+    display:grid;
+
+    grid-template-columns:65px minmax(0,1fr);
+
+    gap:10px;
+
+    align-items:center;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ==========================================================
+   REPORT DATE
+========================================================== */
+
+#reportsPage .report-date{
+
+    width:65px;
+    height:72px;
+
+    box-sizing:border-box;
+
+    border-radius:14px;
+
+    background:#171717;
+
+    border:1px solid #303030;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* ==========================================================
+   DATE MONTH
+========================================================== */
+
+#reportsPage .report-date .month{
+
+    font-size:11px;
+
+    color:#AAAAAA;
+
+    text-transform:uppercase;
+
+}
+
+
+/* ==========================================================
+   DATE DAY
+========================================================== */
+
+#reportsPage .report-date .day{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+    line-height:1;
+
+}
+
+
+/* ==========================================================
+   DATE YEAR
+========================================================== */
+
+#reportsPage .report-date .year{
+
+    font-size:10px;
+
+    color:#777777;
+
+}
+
+
+/* ==========================================================
+   SUMMARY INFO
+========================================================== */
+
+#reportsPage .report-summary-info{
+
+    min-width:0;
+
+    align-self:center;
+
+    padding-right:110px;
+
+    box-sizing:border-box;
+
+}
+
+
+#reportsPage .report-summary-info h3{
+
+    margin:0 0 2px;
+
+    color:#FFFFFF;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    white-space:normal;
+
+    overflow:visible;
+
+    text-overflow:clip;
+}
+
+
+#reportsPage .report-summary-info p{
+
+    margin:1px 0;
+
+    line-height:1.25;
+
+    color:#B0B0B0;
+
+    font-size:10px;
+
+}
+
+
+/* ==========================================================
+   WORK LOG COUNT - RIGHT CENTER
+========================================================== */
+
+#reportsPage .report-work-count{
+
+    position:absolute;
+
+    right:12px;
+
+    top:48px;
+
+    transform:translateY(-50%);
+
+    width:95px;
+
+    min-width:95px;
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    background:transparent;
+
+    color:#FFFFFF;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+}
+
+
+/* ==========================================================
+   SUMMARY DETAILS
+========================================================== */
+
+#reportsPage .report-summary-details{
+
+    display:none;
+
+    margin-top:12px;
+
+    border-top:1px solid #2F2F2F;
+
+    padding-top:18px;
+
+}
+
+
+#reportsPage .report-summary-card.open
+.report-summary-details{
+
+    display:block;
+
+}
+
+/* ==========================================================
+   SUMMARY DETAILS
+========================================================== */
+
+#reportsPage .report-summary-details{
+    display:none;
+
+    margin-top:12px;
+
+    border-top:1px solid #2F2F2F;
+
+    padding-top:18px;
+}
+
+#reportsPage .report-summary-card.open .report-summary-details{
+    display:block;
+}
+
+
+/* ==========================================================
+   REPORTS PAGE
+   MOBILE ONLY
+========================================================== */
+
+#reportsPage{
+    width:100%;
+    box-sizing:border-box;
+
+    padding:16px;
+    padding-bottom:90px;
+
+    background:#111111;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+#reportsPage .reports-header{
+    margin:0 0 18px;
+}
+
+#reportsPage .reports-header h2{
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:22px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+
+/* ==========================================================
+   SEARCH + FILTER
+========================================================== */
+
+#reportsPage .report-toolbar{
+    position:relative;
+
+    width:100%;
+
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 86px;
+
+    gap:7px;
+
+    margin:0 0 16px;
+}
+
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+#reportsPage .report-search{
+    position:relative;
+    width:100%;
+}
+
+#reportsPage .report-search i{
+    position:absolute;
+
+    left:13px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#8A8A8A;
+
+    font-size:13px;
+
+    pointer-events:none;
+}
+
+#reportsPage .report-search input{
+    width:100%;
+    height:42px;
+
+    box-sizing:border-box;
+
+    padding:0 12px 0 38px;
+
+    border:1px solid #2E2E2E;
+    border-radius:11px;
+
+    background:#1A1A1A;
+    color:#FFFFFF;
+
+    font-family:inherit;
+    font-size:12px;
+
+    outline:none;
+}
+
+#reportsPage .report-search input::placeholder{
+    color:#777777;
+}
+
+#reportsPage .report-search input:focus{
+    border-color:#3A3A3A;
+}
+
+
+/* ==========================================================
+   FILTER BUTTON
+========================================================== */
+
+#reportsPage .report-filter-wrapper{
+    position:relative;
+    width:100%;
+}
+
+#reportsPage #reportFilterBtn{
+    width:100%;
+    height:42px;
+
+    box-sizing:border-box;
+
+    margin:0;
+    padding:0 7px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:6px;
+
+    border:1px solid #333333;
+    border-radius:11px;
+
+    background:#252525;
+    color:#FFFFFF;
+
+    font-family:inherit;
+    font-size:11px;
+    font-weight:600;
+
+    cursor:pointer;
+    outline:none;
+}
+
+#reportsPage #reportFilterBtn i{
+    color:#FFFFFF;
+    font-size:11px;
+}
+
+#reportsPage #reportFilterBtn span{
+    color:#FFFFFF;
+}
+
+
+/* ==========================================================
+   FILTER PANEL
+========================================================== */
+
+#reportsPage .report-filter-panel{
+    position:absolute;
+
+    top:calc(100% + 7px);
+    right:0;
+
+    width:210px;
+
+    box-sizing:border-box;
+
+    margin:0;
+    padding:10px;
+
+    display:none;
+    flex-direction:column;
+
+    gap:8px;
+
+    background:#1F1F1F;
+
+    border:1px solid #303030;
+    border-radius:11px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.45);
+
+    z-index:9999;
+}
+
+#reportsPage .report-filter-panel.show{
+    display:flex;
+}
+
+
+/* ==========================================================
+   FILTER GROUP
+========================================================== */
+
+#reportsPage .report-filter-group{
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:5px;
+}
+
+#reportsPage .report-filter-group select{
+    width:100%;
+    height:40px;
+
+    box-sizing:border-box;
+
+    margin:0;
+    padding:0 10px;
+
+    border:1px solid #333333;
+    border-radius:9px;
+
+    background:#181818;
+    color:#FFFFFF;
+
+    font-family:inherit;
+    font-size:12px;
+    font-weight:500;
+
+    outline:none;
+
+    color-scheme:dark;
+}
+
+#reportsPage .report-filter-group select option{
+    background:#181818;
+    color:#FFFFFF;
+}
+
+
+/* ==========================================================
+   REPORT LIST
+========================================================== */
+
+#reportsPage .report-list{
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:14px;
+}
+
+
+/* ==========================================================
+   REPORT SUMMARY CARD
+========================================================== */
+
+#reportsPage .report-summary-card{
+    width:100%;
+
+    box-sizing:border-box;
+
+    margin:0;
+    padding:12px;
+
+    background:#1F1F1F;
+
+    border:1px solid #2D2D2D;
+    border-radius:17px;
+
+    cursor:pointer;
+
+    transition:border-color .2s ease;
+}
+
+#reportsPage .report-summary-card:hover{
+    border-color:#3A3A3A;
+}
+
+
+/* ==========================================================
+   SUMMARY TOP
+========================================================== */
+
+#reportsPage .report-summary-top{
+    width:100%;
+
+    box-sizing:border-box;
+
+    display:grid;
+
+    /*
+       DATE | DETAILS | WORK LOGS
+    */
+    grid-template-columns:54px minmax(0,1fr) 82px;
+
+    column-gap:8px;
+
+    align-items:center;
+}
+
+
+/* ==========================================================
+   DATE CARD
+========================================================== */
+
+#reportsPage .report-date{
+    width:54px;
+    height:62px;
+
+    box-sizing:border-box;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#171717;
+
+    border:1px solid #303030;
+    border-radius:11px;
+}
+
+#reportsPage .report-date .month{
+    margin:0;
+
+    color:#AAAAAA;
+
+    font-size:9px;
+    font-weight:500;
+
+    line-height:1;
+    text-transform:uppercase;
+}
+
+#reportsPage .report-date .day{
+    margin:3px 0 2px;
+
+    color:#FFFFFF;
+
+    font-size:21px;
+    font-weight:700;
+
+    line-height:1;
+}
+
+#reportsPage .report-date .year{
+    margin:0;
+
+    color:#777777;
+
+    font-size:9px;
+
+    line-height:1;
+}
+
+
+/* ==========================================================
+   SUMMARY INFORMATION
+========================================================== */
+
+#reportsPage .report-summary-info{
+    min-width:0;
+
+    align-self:center;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+#reportsPage .report-summary-info h3{
+    min-width:0;
+
+    margin:0 0 2px;
+
+    color:#FFFFFF;
+
+    font-size:14px;
+    font-weight:700;
+
+    line-height:1.15;
+
+    white-space:normal;
+    overflow:visible;
+    text-overflow:clip;
+}
+
+#reportsPage .report-summary-info p{
+    margin:1px 0;
+
+    color:#B0B0B0;
+
+    font-size:10px;
+
+    line-height:1.25;
+
+    white-space:normal;
+    overflow:visible;
+    text-overflow:clip;
+}
+
+
+/* ==========================================================
+   WORK LOG COUNT
+   RIGHT SIDE + VERTICAL CENTER
+========================================================== */
+
+#reportsPage .report-work-count{
+    width:82px;
+    min-width:82px;
+    height:62px;
+
+    box-sizing:border-box;
+
+    margin:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    align-self:center;
+
+    background:transparent;
+
+    color:#FFFFFF;
+
+    font-size:11px;
+    font-weight:700;
+
+    line-height:1.2;
+
+    text-align:center;
+
+    white-space:nowrap;
+}
+
+
+/* ==========================================================
+   SUMMARY DETAILS
+========================================================== */
+
+#reportsPage .report-summary-details{
+    display:none;
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    margin-top:12px;
+    padding-top:14px;
+
+    border-top:1px solid #2F2F2F;
+}
+
+#reportsPage .report-summary-card.open
+.report-summary-details{
+    display:block;
+}
+
+
+/* ==========================================================
+   REPORT TABLE
+========================================================== */
+
+#reportsPage .report-table{
+    width:100%;
+
+    border-collapse:collapse;
+
+    table-layout:fixed;
+}
+
+#reportsPage .report-table th,
+#reportsPage .report-table td{
+    box-sizing:border-box;
+
+    padding:9px 4px;
+
+    vertical-align:middle;
+}
+
+#reportsPage .report-table th{
+    color:#8A8A8A;
+
+    font-size:10px;
+    font-weight:600;
+
+    text-align:left;
+
+    border-bottom:1px solid #333333;
+}
+
+#reportsPage .report-table td{
+    color:#FFFFFF;
+
+    font-size:11px;
+
+    border-bottom:1px solid #2B2B2B;
+}
+
+
+/* ==========================================================
+   TABLE COLUMN WIDTH
+========================================================== */
+
+#reportsPage .report-table th:first-child,
+#reportsPage .report-table td:first-child{
+    width:25%;
+
+    padding-left:0;
+}
+
+#reportsPage .report-table th:nth-child(2),
+#reportsPage .report-table td:nth-child(2){
+    width:25%;
+}
+
+#reportsPage .report-table th:nth-child(3),
+#reportsPage .report-table td:nth-child(3){
+    width:20%;
+}
+
+#reportsPage .report-table th:last-child,
+#reportsPage .report-table td:last-child{
+    width:30%;
+
+    padding-right:0;
+
+    text-align:right;
+}
+
+
+/* ==========================================================
+   MARK AS PAID
+========================================================== */
+
+#reportsPage .report-table button,
+#reportsPage .mark-paid-row-btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:auto;
+    min-width:73px;
+    height:32px;
+
+    box-sizing:border-box;
+
+    margin:0;
+    padding:0 8px;
+
+    border:0 !important;
+    border-radius:8px !important;
+
+    background:#D4AF37 !important;
+    color:#111111 !important;
+
+    font-family:inherit;
+
+    font-size:9px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    appearance:none;
+    -webkit-appearance:none;
+}
+
+#reportsPage .report-table button:hover,
+#reportsPage .mark-paid-row-btn:hover{
+    background:#C9A52F !important;
+    color:#111111 !important;
+}
+
+
+/* ==========================================================
+   UNDO PAID
+========================================================== */
+
+#reportsPage .undo-paid-btn{
+    width:100%;
+    height:34px;
+
+    box-sizing:border-box;
+
+    border:none;
+    border-radius:8px;
+
+    background:#1E4D2B !important;
+    color:#7CFF9D !important;
+
+    font-family:inherit;
+    font-size:10px;
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+#reportsPage .undo-paid-btn:hover{
+    opacity:.9;
+}
+
+
+/* ==========================================================
+   SUBTOTAL
+========================================================== */
+
+#reportsPage .report-subtotal{
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    margin-top:7px;
+
+    color:#FFFFFF;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+
+/* ==========================================================
+   COMPLETED
+========================================================== */
+
+#reportsPage .report-completed{
+    width:100%;
+    height:42px;
+
+    box-sizing:border-box;
+
+    margin-top:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#1E4D2B;
+
+    border:1px solid #2D8A4F;
+    border-radius:11px;
+
+    color:#7CFF9D;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+
+/* ==========================================================
+   GRAND TOTAL
+========================================================== */
+
+#reportsPage .report-grand-total{
+    width:100%;
+
+    box-sizing:border-box;
+
+    margin-top:16px;
+    padding:14px;
+
+    background:#1A1A1A;
+
+    border:1px solid #D4AF37;
+    border-radius:15px;
+}
+
+#reportsPage .report-grand-total h3{
+    margin:0 0 12px;
+
+    color:#D4AF37;
+
+    font-size:15px;
+    font-weight:700;
+}
+
+#reportsPage .report-grand-total .row{
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:8px;
+
+    color:#FFFFFF;
+
+    font-size:12px;
+}
+
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+#reportsPage .reports-empty-state{
+    width:100%;
+    min-height:200px;
+
+    box-sizing:border-box;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:30px 15px;
+
+    background:transparent;
+
+    border:none;
+    box-shadow:none;
+
+    color:#9CA3AF;
+
+    text-align:center;
+}
+
+#reportsPage .reports-empty-state i{
+    display:block;
+
+    margin-bottom:14px;
+
+    color:#6B7280;
+
+    font-size:46px;
+
+    line-height:1;
+}
+
+#reportsPage .reports-empty-state span{
+    display:block;
+
+    color:#9CA3AF;
+
+    font-size:13px;
+    font-weight:500;
+
+    line-height:1.5;
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+========================================================== */
+
+@media(max-width:380px){
+
+    #reportsPage{
+        padding:12px;
+        padding-bottom:88px;
+    }
+
+    #reportsPage .report-toolbar{
+        grid-template-columns:minmax(0,1fr) 82px;
+        gap:5px;
+    }
+
+    #reportsPage .report-summary-top{
+        grid-template-columns:52px minmax(0,1fr) 70px;
+        column-gap:7px;
+    }
+
+    #reportsPage .report-date{
+        width:52px;
+        height:60px;
+    }
+
+    #reportsPage .report-work-count{
+        width:70px;
+        min-width:70px;
+        height:60px;
+
+        font-size:10px;
+    }
+
+    #reportsPage .report-summary-info h3{
+        font-size:13px;
+    }
+
+    #reportsPage .report-summary-info p{
+        font-size:9px;
+    }
+
+    #reportsPage .report-table th,
+    #reportsPage .report-table td{
+        padding-left:3px;
+        padding-right:3px;
+    }
+
+    #reportsPage .report-table button,
+    #reportsPage .mark-paid-row-btn{
+        min-width:68px;
+        height:30px;
+
+        padding:0 6px;
+
+        font-size:8px;
+    }
+}

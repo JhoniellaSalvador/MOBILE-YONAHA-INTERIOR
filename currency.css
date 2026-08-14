@@ -1,0 +1,129 @@
+/* ==========================================================
+   CURRENCY SELECTOR
+   EXPAND UNDER CURRENCY CARD
+========================================================== */
+
+.currency-selector{
+
+    display:none;
+
+    width:100%;
+
+    margin-top:8px;
+
+    padding:8px 0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ==========================================================
+   SHOW CURRENCY OPTIONS
+========================================================== */
+
+.currency-selector.show{
+
+    display:block;
+
+}
+
+
+/* ==========================================================
+   CURRENCY OPTIONS
+========================================================== */
+
+.currency-selector button{
+
+    width:100%;
+
+    min-height:48px;
+
+    padding:14px 0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    border:none;
+
+    border-radius:0;
+
+    background:transparent;
+
+    color:#ffffff;
+
+    font-family:inherit;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+
+}
+
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.currency-selector button + button{
+
+    border-top:1px solid #333333;
+
+}
+
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.currency-selector button:hover{
+
+    background:transparent;
+
+    color:#D4AF37;
+
+    padding-left:5px;
+
+}
+
+
+/* ==========================================================
+   ACTIVE
+========================================================== */
+
+.currency-selector button:active{
+
+    transform:none;
+
+}
+
+
+/* ==========================================================
+   CURRENCY SYMBOL
+========================================================== */
+
+.currency-selector button strong{
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+
+.currency-selector button:hover strong{
+
+    color:#D4AF37;
+
+}

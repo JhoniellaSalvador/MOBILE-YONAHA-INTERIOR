@@ -1,0 +1,932 @@
+/* ==========================================================
+   HISTORY PAGE
+========================================================== */
+
+#historyPage{
+    width:100%;
+    max-width:none;
+    min-width:0;
+    min-height:100vh;
+
+    margin:0;
+    padding:24px 28px 100px 28px;
+
+    box-sizing:border-box;
+
+    background:#111111;
+    color:#FFFFFF;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+
+/* ==========================================================
+   HISTORY TITLE
+   NO CARD
+========================================================== */
+
+#historyPage .history-title{
+    width:100%;
+
+    margin:0 0 18px 0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
+
+#historyPage .history-title h2{
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:24px;
+    font-weight:700;
+
+    line-height:1.2;
+}
+
+#historyPage .history-title p{
+    margin:6px 0 0 0;
+
+    color:#9E9E9E;
+
+    font-size:13px;
+    line-height:1.4;
+}
+
+
+/* ==========================================================
+   SEARCH + FILTER
+   NO OUTER CARD
+========================================================== */
+
+#historyPage .history-toolbar{
+    position:relative;
+
+    width:100%;
+    max-width:none;
+    min-width:0;
+
+    margin:0 0 20px 0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 105px;
+
+    gap:10px;
+    align-items:center;
+
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
+
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+#historyPage .history-search{
+    position:relative;
+
+    width:100%;
+    min-width:0;
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    background:transparent;
+}
+
+#historyPage .history-search i{
+    position:absolute;
+
+    left:14px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#777777;
+
+    font-size:13px;
+
+    pointer-events:none;
+}
+
+#historyPage .history-search input{
+    display:block;
+
+    width:100%;
+    min-width:0;
+    height:44px;
+
+    margin:0;
+    padding:0 14px 0 38px;
+
+    box-sizing:border-box;
+
+    background:#1F1F1F;
+
+    border:1px solid #2F2F2F;
+    border-radius:12px;
+
+    color:#FFFFFF;
+
+    font-family:inherit;
+    font-size:13px;
+
+    outline:none;
+
+    transition:.2s ease;
+}
+
+#historyPage .history-search input::placeholder{
+    color:#777777;
+}
+
+#historyPage .history-search input:focus{
+    border-color:#D4AF37;
+
+    box-shadow:0 0 0 2px rgba(212,175,55,.10);
+}
+
+
+/* ==========================================================
+   FILTER BUTTON
+========================================================== */
+
+#historyPage .history-filter-btn{
+    width:100%;
+    height:44px;
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    border:1px solid #2F2F2F;
+    border-radius:12px;
+
+    background:#1F1F1F;
+    color:#FFFFFF;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:6px;
+
+    font-family:inherit;
+    font-size:12px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+}
+
+#historyPage .history-filter-btn:hover{
+    background:#252525;
+    border-color:#444444;
+}
+
+#historyPage .history-filter-btn:active{
+    transform:scale(.98);
+}
+
+#historyPage .history-filter-btn i{
+    font-size:12px;
+}
+
+
+/* ==========================================================
+   FILTER PANEL
+========================================================== */
+
+#historyPage .history-filter-panel{
+    display:none;
+
+    position:absolute;
+
+    top:calc(100% + 8px);
+    right:0;
+
+    width:230px;
+
+    margin:0;
+    padding:12px;
+
+    box-sizing:border-box;
+
+    background:#1F1F1F;
+
+    border:1px solid #333333;
+    border-radius:14px;
+
+    z-index:99999;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.45);
+}
+
+#historyPage .history-filter-panel.show{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:9px;
+}
+
+#historyPage .history-filter-panel select{
+    width:100%;
+    height:42px;
+
+    padding:0 12px;
+
+    box-sizing:border-box;
+
+    background:#111111;
+
+    border:1px solid #333333;
+    border-radius:11px;
+
+    color:#FFFFFF;
+
+    font-family:inherit;
+    font-size:13px;
+
+    outline:none;
+
+    cursor:pointer;
+}
+
+#historyPage .history-filter-panel select:focus{
+    border-color:#D4AF37;
+
+    box-shadow:0 0 0 2px rgba(212,175,55,.10);
+}
+
+
+/* ==========================================================
+   HISTORY LIST
+   NO OUTER CARD
+========================================================== */
+
+#historyPage .history-mobile-list,
+#historyPage #historyMobileList{
+    display:flex;
+    flex-direction:column;
+
+    width:100%;
+    max-width:none;
+    min-width:0;
+
+    gap:10px;
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    background:transparent;
+
+    border:none;
+    box-shadow:none;
+
+    overflow:visible;
+}
+
+
+/* ==========================================================
+   INDIVIDUAL HISTORY SCHEDULE CARD
+========================================================== */
+
+#historyPage .history-card{
+    position:relative;
+
+    display:block;
+
+    width:100%;
+    max-width:none;
+    min-width:0;
+
+    min-height:92px;
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    background:#252525;
+
+    border:1px solid #303030;
+    border-radius:15px;
+
+    overflow:visible;
+
+    transition:.2s ease;
+}
+
+#historyPage .history-card:hover{
+    border-color:#3A3A3A;
+}
+
+
+/* ==========================================================
+   CARD HEADER
+========================================================== */
+
+#historyPage .history-card-header{
+    display:grid;
+
+    grid-template-columns:58px minmax(0,1fr) auto;
+
+    align-items:center;
+
+    width:100%;
+    min-width:0;
+
+    gap:10px;
+
+    padding:12px;
+
+    box-sizing:border-box;
+
+    cursor:pointer;
+}
+
+
+/* ==========================================================
+   DATE CARD
+========================================================== */
+
+#historyPage .history-date-card{
+    width:58px;
+    min-width:58px;
+
+    height:64px;
+
+    border-radius:11px;
+
+    background:#181818;
+
+    border:1px solid #303030;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    box-sizing:border-box;
+}
+
+#historyPage .history-month{
+    color:#AAAAAA;
+
+    font-size:9px;
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    line-height:1;
+}
+
+#historyPage .history-day{
+    margin:3px 0;
+
+    color:#FFFFFF;
+
+    font-size:22px;
+    font-weight:700;
+
+    line-height:1;
+}
+
+#historyPage .history-year{
+    color:#777777;
+
+    font-size:8px;
+
+    line-height:1;
+}
+
+
+/* ==========================================================
+   CARD LEFT / INFORMATION
+========================================================== */
+
+#historyPage .history-card-left{
+    width:100%;
+    min-width:0;
+
+    overflow:hidden;
+}
+
+#historyPage .history-card-left h4{
+    width:100%;
+
+    margin:0 0 2px 0;
+
+    color:#FFFFFF;
+
+    font-size:15px;
+    font-weight:700;
+
+    line-height:1.2;
+
+    white-space:nowrap;
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+#historyPage .history-card-left p{
+    width:100%;
+
+    margin:2px 0;
+
+    color:#AFAFAF;
+
+    font-size:10px;
+
+    line-height:1.3;
+
+    white-space:nowrap;
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+
+/* ==========================================================
+   SUMMARY
+========================================================== */
+
+#historyPage .history-card-summary{
+    margin-top:5px;
+
+    color:#BDBDBD;
+
+    font-size:10px;
+
+    line-height:1.3;
+}
+
+#historyPage .history-card-date{
+    color:#FFFFFF;
+
+    font-size:13px;
+    font-weight:700;
+}
+
+#historyPage .history-card-time{
+    margin-top:5px;
+
+    color:#D4AF37;
+
+    font-size:10px;
+    font-weight:600;
+}
+
+
+/* ==========================================================
+   RIGHT SIDE
+========================================================== */
+
+#historyPage .history-card-right{
+    display:flex;
+
+    align-items:center;
+    justify-content:flex-end;
+
+    gap:6px;
+
+    min-width:0;
+}
+
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+#historyPage .history-status{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-width:60px;
+    height:28px;
+
+    padding:0 9px;
+
+    border-radius:20px;
+
+    font-size:9px;
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    box-sizing:border-box;
+}
+
+#historyPage .history-status.work{
+    background:#173D24;
+    color:#42D86C;
+}
+
+#historyPage .history-status.dayoff{
+    background:#4A3906;
+    color:#F7C948;
+}
+
+#historyPage .history-status.holiday{
+    background:#4A1515;
+    color:#FF5A5A;
+}
+
+
+/* ==========================================================
+   THREE DOT MENU
+========================================================== */
+
+#historyPage .history-menu{
+    position:relative;
+
+    flex-shrink:0;
+
+    z-index:1000;
+}
+
+#historyPage .history-menu-btn{
+    position:relative;
+
+    z-index:1001;
+
+    width:28px;
+    height:28px;
+
+    margin:0;
+    padding:0;
+
+    border:none;
+    outline:none;
+
+    background:transparent;
+
+    color:#AAAAAA;
+
+    font-size:18px;
+    line-height:28px;
+
+    cursor:pointer;
+}
+
+#historyPage .history-menu-btn:hover{
+    color:#FFFFFF;
+}
+
+
+/* ==========================================================
+   HISTORY MENU DROPDOWN
+========================================================== */
+
+#historyPage .history-menu-dropdown{
+    position:fixed !important;
+
+    display:none !important;
+    flex-direction:row !important;
+
+    width:112px !important;
+    min-width:112px !important;
+
+    height:42px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    background:#252525 !important;
+
+    border:1px solid #3A3A3A !important;
+    border-radius:10px !important;
+
+    overflow:hidden !important;
+
+    z-index:999999 !important;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.45) !important;
+}
+
+#historyPage .history-menu-dropdown.show{
+    display:flex !important;
+
+    visibility:visible !important;
+
+    opacity:1 !important;
+}
+
+#historyPage .history-menu-dropdown button{
+    display:flex !important;
+
+    flex:1 1 50% !important;
+
+    width:50% !important;
+    min-width:0 !important;
+
+    height:42px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    border:none !important;
+
+    background:#252525 !important;
+
+    color:#FFFFFF !important;
+
+    align-items:center !important;
+    justify-content:center !important;
+
+    text-align:center;
+
+    font-family:inherit;
+
+    font-size:12px;
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+#historyPage .history-menu-dropdown button:hover{
+    background:#333333 !important;
+}
+
+#historyPage .history-menu-dropdown .delete-btn{
+    color:#FF6B6B !important;
+
+    border-left:1px solid #3A3A3A !important;
+}
+
+#historyPage .history-menu-dropdown .delete-btn:hover{
+    background:#3A2222 !important;
+
+    color:#FF7777 !important;
+}
+
+
+/* ==========================================================
+   DETAILS
+========================================================== */
+
+#historyPage .history-card-details{
+    display:none;
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:13px;
+
+    border-top:1px solid #303030;
+
+    background:#181818;
+
+    border-radius:0 0 15px 15px;
+}
+
+#historyPage .history-card.active .history-card-details{
+    display:block;
+}
+
+
+/* ==========================================================
+   DETAIL ROW
+========================================================== */
+
+#historyPage .history-detail{
+    width:100%;
+
+    margin:0 0 12px 0;
+
+    box-sizing:border-box;
+}
+
+#historyPage .history-detail:last-child{
+    margin-bottom:0;
+}
+
+#historyPage .history-detail label{
+    display:block;
+
+    margin:0 0 3px 0;
+
+    color:#858585;
+
+    font-size:9px;
+    font-weight:600;
+}
+
+#historyPage .history-detail span{
+    display:block;
+
+    width:100%;
+
+    color:#FFFFFF;
+
+    font-size:12px;
+
+    line-height:1.5;
+
+    word-break:break-word;
+}
+
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+#historyPage .history-empty{
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:45px 18px;
+
+    background:#1F1F1F;
+
+    border:1px solid #2F2F2F;
+
+    border-radius:15px;
+
+    text-align:center;
+}
+
+#historyPage .history-empty i{
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#555555;
+
+    font-size:38px;
+}
+
+#historyPage .history-empty p{
+    margin:0;
+
+    color:#888888;
+
+    font-size:12px;
+}
+
+
+/* ==========================================================
+   TABLET / MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+    #historyPage{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+
+        margin:0;
+
+        padding:20px 16px 100px 16px;
+
+        box-sizing:border-box;
+    }
+
+    /* TITLE */
+
+    #historyPage .history-title{
+        margin-bottom:16px;
+    }
+
+    #historyPage .history-title h2{
+        font-size:24px;
+    }
+
+    #historyPage .history-title p{
+        margin-top:5px;
+
+        font-size:12px;
+    }
+
+
+    /* SEARCH + FILTER */
+
+    #historyPage .history-toolbar{
+        width:100%;
+
+        margin-bottom:18px;
+
+        padding:0;
+
+        grid-template-columns:minmax(0,1fr) 92px;
+
+        gap:8px;
+
+        background:transparent;
+
+        border:none;
+    }
+
+    #historyPage .history-search input{
+        height:42px;
+
+        font-size:12px;
+    }
+
+    #historyPage .history-filter-btn{
+        height:42px;
+
+        font-size:11px;
+    }
+
+
+    /* FILTER PANEL */
+
+    #historyPage .history-filter-panel{
+        left:0;
+        right:auto;
+
+        width:100%;
+    }
+
+
+    /* LIST */
+
+    #historyPage .history-mobile-list,
+    #historyPage #historyMobileList{
+        width:100%;
+
+        margin:0;
+        padding:0;
+    }
+
+
+    /* SCHEDULE CARDS */
+
+    #historyPage .history-card{
+        width:100%;
+
+        border-radius:14px;
+    }
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+========================================================== */
+
+@media(max-width:380px){
+
+    #historyPage{
+        padding-left:12px;
+        padding-right:12px;
+    }
+
+    #historyPage .history-toolbar{
+        grid-template-columns:minmax(0,1fr) 82px;
+
+        gap:7px;
+    }
+
+    #historyPage .history-card-header{
+        grid-template-columns:52px minmax(0,1fr) auto;
+
+        gap:8px;
+
+        padding:10px;
+    }
+
+    #historyPage .history-date-card{
+        width:52px;
+        min-width:52px;
+
+        height:60px;
+    }
+
+    #historyPage .history-day{
+        font-size:20px;
+    }
+
+    #historyPage .history-status{
+        min-width:52px;
+
+        padding:0 7px;
+
+        font-size:8px;
+    }
+}

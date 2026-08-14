@@ -1,0 +1,1237 @@
+/* ==========================================================
+   SALARY PAGE
+   CLEAN MOBILE / DARK GOLD VERSION
+========================================================== */
+
+#salaryPage {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-bottom: 90px;
+
+    background: #111111;
+    color: #FFFFFF;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+#salaryPage .schedule-header {
+    margin: 0 0 18px;
+}
+
+#salaryPage #salaryTitle {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* ==========================================================
+   SALARY TABS
+========================================================== */
+
+#salaryPage .salary-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+#salaryPage .salary-tab {
+    min-width: 0;
+    height: 46px;
+
+    padding: 0 8px;
+
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    background: #1F1F1F;
+    color: #BDBDBD;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+}
+
+#salaryPage .salary-tab:hover {
+    background: #2A2A2A;
+    color: #FFFFFF;
+}
+
+#salaryPage .salary-tab.active {
+    background: #D4AF37;
+    color: #111111;
+    border-color: #D4AF37;
+}
+
+
+/* ==========================================================
+   TAB SECTIONS
+========================================================== */
+
+#salaryPage #salaryFormSection,
+#salaryPage #salaryLogsSection,
+#salaryPage #salaryAdvanceSection,
+#salaryPage #salaryAdvanceHistorySection {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   CREATE WORK CARD
+========================================================== */
+
+#salaryPage #salaryFormSection {
+    background: #1F1F1F;
+    border: 1px solid #303030;
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   ADVANCE CARD
+========================================================== */
+
+#salaryPage #salaryAdvanceSection {
+    display: none;
+}
+
+#salaryPage #salaryAdvanceSection .salary-card {
+    background: #1F1F1F;
+    border: 1px solid #303030;
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   FORM GRID
+========================================================== */
+
+#salaryPage .salary-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0 16px;
+}
+
+
+/* ==========================================================
+   INPUT GROUP
+========================================================== */
+
+#salaryPage .input-group,
+#salaryPage .salary-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+#salaryPage .input-group label,
+#salaryPage .salary-group label {
+    color: #D0D0D0;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   FULL WIDTH
+========================================================== */
+
+#salaryPage .salary-full {
+    grid-column: 1 / -1;
+}
+
+
+/* ==========================================================
+   INPUT / SELECT / TEXTAREA
+========================================================== */
+
+#salaryPage input,
+#salaryPage select,
+#salaryPage textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #333333;
+    border-radius: 12px;
+
+    background: #111111;
+    color: #FFFFFF;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+#salaryPage input,
+#salaryPage select {
+    height: 46px;
+    padding: 0 14px;
+}
+
+#salaryPage textarea {
+    min-height: 90px;
+    padding: 12px 14px;
+
+    resize: vertical;
+}
+
+#salaryPage input::placeholder,
+#salaryPage textarea::placeholder {
+    color: #777777;
+}
+
+#salaryPage input:focus,
+#salaryPage select:focus,
+#salaryPage textarea:focus {
+    border-color: #D4AF37;
+
+    box-shadow:
+        0 0 0 2px rgba(212, 175, 55, .10);
+}
+
+
+/* ==========================================================
+   SELECT
+========================================================== */
+
+#salaryPage select {
+    cursor: pointer;
+}
+
+#salaryPage option {
+    background: #111111;
+    color: #FFFFFF;
+}
+
+
+/* ==========================================================
+   SUMMARY
+========================================================== */
+
+#salaryPage hr {
+    border: 0;
+    border-top: 1px solid #353535;
+
+    margin: 8px 0 10px;
+}
+
+#salaryPage .salary-summary-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 40px;
+    padding: 8px 0;
+
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+#salaryPage .salary-summary-row span {
+    color: #D0D0D0;
+}
+
+#salaryPage .salary-summary-row strong {
+    color: #FFFFFF;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#salaryPage .salary-summary-row.total {
+    margin-top: 4px;
+    padding-top: 14px;
+
+    border-top: 1px solid #353535;
+}
+
+#salaryPage .salary-summary-row.total span {
+    color: #FFFFFF;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+#salaryPage .salary-summary-row.total strong {
+    color: #D4AF37;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   SAVE BUTTONS
+========================================================== */
+
+#salaryPage #saveSalaryBtn,
+#salaryPage #saveAdvanceBtn {
+    width: 100%;
+    height: 50px;
+
+    margin-top: 14px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: #D4AF37;
+    color: #111111;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        opacity .2s ease,
+        transform .15s ease;
+}
+
+#salaryPage #saveSalaryBtn:hover,
+#salaryPage #saveAdvanceBtn:hover {
+    opacity: .92;
+}
+
+#salaryPage #saveSalaryBtn:active,
+#salaryPage #saveAdvanceBtn:active {
+    transform: scale(.98);
+}
+
+
+/* ==========================================================
+   WORK LOGS
+========================================================== */
+
+#salaryPage #salaryLogsSection {
+    display: none;
+}
+
+#salaryPage #workLogsTitle {
+    margin: 0 0 12px;
+
+    color: #FFFFFF;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   SEARCH + FILTER
+========================================================== */
+
+#salaryPage .history-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 96px;
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+}
+
+#salaryPage .history-search {
+    position: relative;
+    min-width: 0;
+}
+
+#salaryPage .history-search i {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #777777;
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+#salaryPage .history-search input {
+    height: 44px;
+
+    padding-left: 38px;
+
+    background: #1F1F1F;
+    border-color: #303030;
+}
+
+#salaryPage .history-filter-btn {
+    height: 44px;
+
+    border: 1px solid #333333;
+    border-radius: 12px;
+
+    background: #252525;
+    color: #FFFFFF;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#salaryPage .history-filter-btn:hover {
+    background: #303030;
+}
+
+
+/* ==========================================================
+   FILTER PANEL
+========================================================== */
+
+#salaryPage .history-filter-panel {
+    display: none;
+
+    margin-bottom: 12px;
+    padding: 10px;
+
+    background: #1F1F1F;
+
+    border: 1px solid #303030;
+    border-radius: 12px;
+}
+
+#salaryPage .history-filter-panel.show {
+    display: block;
+}
+
+
+/* ==========================================================
+   WORK LOG LIST
+========================================================== */
+
+#salaryPage #salaryHistoryList,
+#salaryPage #advanceHistoryList {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin: 0;
+}
+
+
+/* ==========================================================
+   WORK LOG + ADVANCE HISTORY CARD
+========================================================== */
+
+#salaryPage #salaryHistoryList .salary-log-card,
+#salaryPage #advanceHistoryList .salary-log-card {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    background: #1F1F1F;
+
+    border: 1px solid #303030;
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease;
+}
+
+#salaryPage #salaryHistoryList .salary-log-card:hover,
+#salaryPage #advanceHistoryList .salary-log-card:hover {
+    border-color: #3A3A3A;
+}
+
+
+/* ==========================================================
+   LOG TOP
+========================================================== */
+
+#salaryPage .salary-log-top {
+    display: grid;
+
+    grid-template-columns: 58px minmax(0, 1fr) auto;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
+
+/* ==========================================================
+   DATE CARD
+========================================================== */
+
+#salaryPage .salary-date-card {
+    width: 58px;
+    height: 66px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    align-self: center;
+
+    background: #171717;
+
+    border: 1px solid #303030;
+    border-radius: 12px;
+}
+
+#salaryPage .salary-date-card .month {
+    color: #AAAAAA;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+#salaryPage .salary-date-card .day {
+    color: #FFFFFF;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+#salaryPage .salary-date-card .year {
+    margin-top: 3px;
+
+    color: #777777;
+
+    font-size: 9px;
+}
+
+
+/* ==========================================================
+   LOG SUMMARY
+========================================================== */
+
+#salaryPage .salary-summary-info {
+    min-width: 0;
+}
+
+#salaryPage .salary-summary-info h3 {
+    margin: 0 0 3px;
+
+    color: #FFFFFF;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#salaryPage .salary-summary-info p {
+    margin: 2px 0;
+
+    color: #AAAAAA;
+
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+
+/* ==========================================================
+   CARD SUMMARY
+========================================================== */
+
+#salaryPage .salary-card-summary {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+    margin-top: 8px;
+    padding-top: 8px;
+
+    border-top: 1px solid #303030;
+}
+
+#salaryPage .salary-card-summary div {
+    flex: 1;
+
+    text-align: center;
+}
+
+#salaryPage .salary-card-summary span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #8F8F8F;
+
+    font-size: 9px;
+}
+
+#salaryPage .salary-card-summary strong {
+    color: #FFFFFF;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+#salaryPage .salary-status-badge {
+    min-width: 62px;
+    height: 28px;
+
+    padding: 0 9px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 999px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+#salaryPage .salary-status-badge.pending {
+    background: #D4AF37;
+    color: #111111;
+}
+
+#salaryPage .salary-status-badge.paid {
+    background: #246B35;
+    color: #66FF9C;
+}
+
+
+/* ==========================================================
+   LOG DETAILS
+========================================================== */
+
+#salaryPage .salary-log-details {
+    display: none;
+
+    margin-top: 10px;
+    padding-top: 10px;
+
+    border-top: 1px solid #303030;
+}
+
+#salaryPage .salary-log-card.open .salary-log-details {
+    display: block;
+}
+
+#salaryPage .salary-detail-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 7px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+#salaryPage .salary-detail-row:last-child {
+    border-bottom: none;
+}
+
+#salaryPage .salary-detail-label {
+    color: #8F8F8F;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+#salaryPage .salary-detail-value {
+    color: #FFFFFF;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+/* ==========================================================
+   THREE DOT MENU
+========================================================== */
+
+#salaryPage .salary-menu {
+    position: relative;
+
+    align-self: center;
+
+    flex-shrink: 0;
+}
+
+#salaryPage .history-menu-btn {
+    width: 28px;
+    height: 30px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent !important;
+    color: #D4D4D4;
+
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+#salaryPage .history-menu-btn:hover {
+    color: #FFFFFF;
+}
+
+
+/* ==========================================================
+   MENU DROPDOWN
+========================================================== */
+
+#salaryPage .history-menu-dropdown {
+    display: none;
+
+    position: absolute;
+
+    top: 30px;
+    right: 0;
+
+    width: 120px;
+    min-width: 120px;
+    height: 42px;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    background: #242424;
+
+    border: 1px solid #333333;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .4);
+
+    z-index: 1000;
+}
+
+#salaryPage .salary-menu.active .history-menu-dropdown {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: stretch;
+    justify-content: stretch;
+
+    gap: 0;
+}
+
+
+/* ==========================================================
+   MENU BUTTONS
+========================================================== */
+
+#salaryPage .history-menu-dropdown button {
+    flex: 1 1 50%;
+
+    width: 50%;
+    height: 42px;
+
+    margin: 0;
+    padding: 0;
+
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+
+    background: #242424 !important;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF !important;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    box-shadow: none !important;
+}
+
+
+/* ==========================================================
+   EDIT — WHITE
+========================================================== */
+
+#salaryPage .history-menu-dropdown button.edit-btn,
+#salaryPage .history-menu-dropdown button:first-child {
+    color: #FFFFFF !important;
+    background: #242424 !important;
+}
+
+#salaryPage .history-menu-dropdown button.edit-btn:hover,
+#salaryPage .history-menu-dropdown button:first-child:hover {
+    color: #FFFFFF !important;
+    background: #333333 !important;
+}
+
+
+/* ==========================================================
+   DELETE — RED
+========================================================== */
+
+#salaryPage .history-menu-dropdown button.delete-btn,
+#salaryPage .history-menu-dropdown button:last-child {
+    color: #FF5A5A !important;
+    background: #242424 !important;
+
+    border-left: 1px solid #3A3A3A !important;
+}
+
+#salaryPage .history-menu-dropdown button.delete-btn:hover,
+#salaryPage .history-menu-dropdown button:last-child:hover {
+    color: #FF6B6B !important;
+    background: #3A2222 !important;
+}
+
+
+/* ==========================================================
+   MENU ACTIVE / FOCUS
+========================================================== */
+
+#salaryPage .history-menu-dropdown button:focus,
+#salaryPage .history-menu-dropdown button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#salaryPage .history-menu-dropdown button.edit-btn:active,
+#salaryPage .history-menu-dropdown button.edit-btn:focus {
+    color: #FFFFFF !important;
+    background: #333333 !important;
+}
+
+#salaryPage .history-menu-dropdown button.delete-btn:active,
+#salaryPage .history-menu-dropdown button.delete-btn:focus {
+    color: #FF5A5A !important;
+    background: #3A2222 !important;
+}
+
+
+/* ==========================================================
+   ADVANCE HISTORY
+========================================================== */
+
+#salaryPage #salaryAdvanceHistorySection {
+    display: none;
+}
+
+#salaryPage #salaryAdvanceHistorySection h3 {
+    margin: 0 0 12px;
+
+    color: #FFFFFF;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   ADVANCE FILTER
+========================================================== */
+
+#salaryPage #advanceFilterPanel {
+    display: none;
+
+    margin-bottom: 12px;
+    padding: 10px;
+
+    background: #1F1F1F;
+
+    border: 1px solid #303030;
+    border-radius: 12px;
+}
+
+#salaryPage #advanceFilterPanel.show {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+}
+
+#salaryPage #advanceFilterPanel select {
+    height: 42px;
+}
+
+
+/* ==========================================================
+   EMPTY
+========================================================== */
+
+#salaryPage .empty-history {
+    margin: 0;
+
+    padding: 30px 10px;
+
+    color: #888888;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    #salaryPage {
+        padding: 16px;
+        padding-bottom: 90px;
+    }
+
+
+    /* HEADER */
+
+    #salaryPage #salaryTitle {
+        font-size: 22px;
+    }
+
+
+    /* TABS */
+
+    #salaryPage .salary-tabs {
+        gap: 5px;
+        margin-bottom: 18px;
+    }
+
+    #salaryPage .salary-tab {
+        height: 42px;
+
+        padding: 0 5px;
+
+        border-radius: 10px;
+
+        font-size: 10px;
+    }
+
+
+    /* CARDS */
+
+    #salaryPage #salaryFormSection,
+    #salaryPage #salaryAdvanceSection .salary-card {
+        padding: 16px;
+        border-radius: 17px;
+    }
+
+    #salaryPage #salaryHistoryList .salary-log-card,
+    #salaryPage #advanceHistoryList .salary-log-card {
+        padding: 11px;
+        border-radius: 16px;
+    }
+
+
+    /* FORM */
+
+    #salaryPage .salary-form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    #salaryPage .salary-full {
+        grid-column: auto;
+    }
+
+    #salaryPage .input-group,
+    #salaryPage .salary-group {
+        margin-bottom: 14px;
+        gap: 6px;
+    }
+
+    #salaryPage .input-group label,
+    #salaryPage .salary-group label {
+        font-size: 11px;
+    }
+
+    #salaryPage input,
+    #salaryPage select {
+        height: 46px;
+        font-size: 13px;
+    }
+
+    #salaryPage textarea {
+        min-height: 84px;
+        font-size: 13px;
+    }
+
+
+    /* SUMMARY */
+
+    #salaryPage .salary-summary-row {
+        min-height: 38px;
+        font-size: 13px;
+    }
+
+    #salaryPage .salary-summary-row.total span {
+        font-size: 16px;
+    }
+
+    #salaryPage .salary-summary-row.total strong {
+        font-size: 21px;
+    }
+
+
+    /* BUTTON */
+
+    #salaryPage #saveSalaryBtn,
+    #salaryPage #saveAdvanceBtn {
+        height: 48px;
+        font-size: 13px;
+    }
+
+
+    /* TITLES */
+
+    #salaryPage #workLogsTitle,
+    #salaryPage #salaryAdvanceHistorySection h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+
+    /* SEARCH */
+
+    #salaryPage .history-toolbar {
+        grid-template-columns: minmax(0, 1fr) 92px;
+        gap: 7px;
+    }
+
+    #salaryPage .history-search input,
+    #salaryPage .history-filter-btn {
+        height: 42px;
+    }
+
+
+    /* LOG TOP */
+
+    #salaryPage .salary-log-top {
+        grid-template-columns: 54px minmax(0, 1fr) auto;
+        gap: 8px;
+
+        align-items: center;
+    }
+
+    #salaryPage .salary-date-card {
+        width: 54px;
+        height: 62px;
+
+        border-radius: 11px;
+
+        align-self: center;
+    }
+
+    #salaryPage .salary-date-card .day {
+        font-size: 21px;
+    }
+
+    #salaryPage .salary-summary-info h3 {
+        font-size: 14px;
+    }
+
+    #salaryPage .salary-summary-info p {
+        font-size: 10px;
+    }
+
+    #salaryPage .salary-status-badge {
+        min-width: 58px;
+        height: 27px;
+
+        font-size: 8px;
+    }
+
+
+    /* MENU */
+
+    #salaryPage .salary-menu {
+        align-self: center;
+    }
+
+
+    /* DETAILS */
+
+    #salaryPage .salary-detail-row {
+        gap: 10px;
+    }
+
+    #salaryPage .salary-detail-label,
+    #salaryPage .salary-detail-value {
+        font-size: 10px;
+    }
+
+
+    /* ADVANCE FILTER */
+
+    #salaryPage #advanceFilterPanel.show {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 380px) {
+
+    #salaryPage {
+        padding: 12px;
+        padding-bottom: 88px;
+    }
+
+    #salaryPage .salary-tabs {
+        gap: 3px;
+    }
+
+    #salaryPage .salary-tab {
+        font-size: 9px;
+        padding: 0 3px;
+    }
+
+    #salaryPage #salaryFormSection,
+    #salaryPage #salaryAdvanceSection .salary-card {
+        padding: 14px;
+    }
+
+    #salaryPage .salary-log-top {
+        grid-template-columns: 50px minmax(0, 1fr) auto;
+        gap: 8px;
+    }
+
+    #salaryPage .salary-date-card {
+        width: 50px;
+        height: 60px;
+    }
+
+    #salaryPage .salary-date-card .day {
+        font-size: 20px;
+    }
+}
+
+/* ==========================================================
+   iOS DATE INPUT FIX
+   CREATE WORK + ADVANCE
+========================================================== */
+
+@media (max-width: 768px){
+
+    #salaryPage input[type="date"]{
+
+        width:100%;
+
+        max-width:100%;
+
+        min-width:0;
+
+        box-sizing:border-box;
+
+        -webkit-appearance:none;
+
+        appearance:none;
+
+        padding-left:12px;
+
+        padding-right:12px;
+
+        font-size:13px;
+
+        height:46px;
+
+        overflow:hidden;
+
+    }
+
+}

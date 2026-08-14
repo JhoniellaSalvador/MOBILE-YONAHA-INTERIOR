@@ -1,0 +1,300 @@
+/* ==========================================================
+   LOGIN PAGE
+========================================================== */
+
+.login-page{
+
+    position:relative;
+
+    width:100%;
+    min-height:100vh;
+
+    padding:35px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.65)
+        ),
+        url("../images/login-bg.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.login-logo{
+
+    width:100px;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.login-title{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#D4AF37;
+
+    letter-spacing:2px;
+
+    text-align:center;
+
+}
+
+
+.login-subtitle{
+
+    font-size:15px;
+
+    color:#FFFFFF;
+
+    margin-top:6px;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================================
+   LOGIN CARD
+========================================================== */
+
+.login-card{
+
+    width:100%;
+
+    max-width:380px;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    background:rgba(20,20,20,.75);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+}
+
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+.input-group{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+
+.input-group input{
+
+    width:100%;
+
+    height:55px;
+
+    padding:0 48px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:#242424;
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+}
+
+
+.input-group input::placeholder{
+
+    color:#999;
+
+}
+
+
+.input-group i:first-child{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#D4AF37;
+
+}
+
+
+.toggle-password{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#999;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   REMEMBER ME
+========================================================== */
+
+.remember-row{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    color:#CCCCCC;
+
+    font-size:14px;
+
+}
+
+
+.remember-row label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+.remember-row input{
+
+    accent-color:#D4AF37;
+
+}
+
+
+/* ==========================================================
+   LOGIN BUTTON
+========================================================== */
+
+.login-btn{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#D4AF37;
+
+    color:#111;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.forgot-link{
+
+    text-align:center;
+
+    margin-top:5px;
+
+}
+
+
+.forgot-link span{
+
+    color:#D4AF37;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+.register-link{
+
+    text-align:center;
+
+    color:#FFFFFF;
+
+    font-size:14px;
+
+    margin-top:10px;
+
+}
+
+
+.register-link span{
+
+    color:#D4AF37;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}

@@ -1,0 +1,481 @@
+/* ==========================================================
+   SCHEDULE PAGE
+========================================================== */
+
+#schedulePage{
+
+    min-height:100vh;
+
+    background:#111111;
+
+    color:#FFFFFF;
+
+    padding:20px;
+
+    padding-bottom:90px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.schedule-header{
+
+    margin-bottom:20px;
+
+}
+
+.schedule-header h2{
+
+    margin:0 0 6px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+}
+
+.schedule-header p{
+
+    margin:0;
+
+    color:#9A9A9A;
+
+    font-size:14px;
+
+}
+
+
+/* ==========================================================
+   FORM CARD
+========================================================== */
+
+.schedule-card{
+
+    width:100%;
+
+    background:#1F1F1F;
+
+    border:1px solid #2F2F2F;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ==========================================================
+   INPUT GROUP
+========================================================== */
+
+.schedule-card .input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-bottom:16px;
+
+}
+
+.schedule-card .input-group label{
+
+    color:#BDBDBD;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+}
+
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.schedule-card input,
+.schedule-card select,
+.schedule-card textarea{
+
+    width:100%;
+
+    background:#111111;
+
+    color:#FFFFFF;
+
+    border:1px solid #333333;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    outline:none;
+
+    box-sizing:border-box;
+
+    transition:.25s;
+
+}
+
+
+/* ==========================================================
+   TEXT / DATE / SELECT
+========================================================== */
+
+.schedule-card input,
+.schedule-card select{
+
+    height:52px;
+
+    padding:0 14px;
+
+}
+
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+.schedule-card textarea{
+
+    min-height:110px;
+
+    padding:14px;
+
+    resize:vertical;
+
+    line-height:1.5;
+
+}
+
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+.schedule-card input:focus,
+.schedule-card select:focus,
+.schedule-card textarea:focus{
+
+    border-color:#D4AF37;
+
+    box-shadow:
+        0 0 0 2px rgba(212,175,55,.12);
+
+}
+
+
+/* ==========================================================
+   PLACEHOLDER
+========================================================== */
+
+.schedule-card input::placeholder,
+.schedule-card textarea::placeholder{
+
+    color:#777777;
+
+}
+
+
+/* ==========================================================
+   SELECT
+========================================================== */
+
+.schedule-card select{
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   TIME ROW
+========================================================== */
+
+.schedule-card .time-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+    margin-bottom:16px;
+
+}
+
+.schedule-card .time-row .input-group{
+
+    margin-bottom:0;
+
+}
+
+
+/* ==========================================================
+   SAVE BUTTON
+========================================================== */
+
+#saveScheduleBtn{
+
+    width:100%;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#D4AF37;
+
+    color:#111111;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#saveScheduleBtn:hover{
+
+    opacity:.92;
+
+}
+
+#saveScheduleBtn:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* ==========================================================
+   MOBILE / iOS FIX
+========================================================== */
+
+@media(max-width:768px){
+
+    #schedulePage{
+
+        padding:16px;
+
+        padding-bottom:90px;
+
+        width:100%;
+
+        max-width:100%;
+
+        overflow-x:hidden;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .schedule-header{
+
+        margin-bottom:18px;
+
+    }
+
+
+    .schedule-header h2{
+
+        font-size:22px;
+
+    }
+
+
+    .schedule-header p{
+
+        font-size:13px;
+
+    }
+
+
+    .schedule-card{
+
+        width:100%;
+
+        max-width:100%;
+
+        padding:16px;
+
+        border-radius:16px;
+
+        box-sizing:border-box;
+
+        overflow:hidden;
+
+    }
+
+
+    .schedule-card .input-group{
+
+        width:100%;
+
+        max-width:100%;
+
+        gap:6px;
+
+        margin-bottom:14px;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .schedule-card .input-group label{
+
+        font-size:11px;
+
+    }
+
+
+    .schedule-card input,
+    .schedule-card select,
+    .schedule-card textarea{
+
+        width:100%;
+
+        max-width:100%;
+
+        min-width:0;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .schedule-card input,
+    .schedule-card select{
+
+        height:50px;
+
+        font-size:13px;
+
+        padding-left:12px;
+
+        padding-right:12px;
+
+    }
+
+
+    /* ======================================================
+       iOS DATE INPUT
+    ====================================================== */
+
+    .schedule-card input[type="date"]{
+
+        width:100%;
+
+        max-width:100%;
+
+        min-width:0;
+
+        -webkit-appearance:none;
+
+        appearance:none;
+
+        box-sizing:border-box;
+
+    }
+
+
+    /* ======================================================
+       TIME IN / TIME OUT
+    ====================================================== */
+
+    .schedule-card .time-row{
+
+        display:grid;
+
+        grid-template-columns:
+            minmax(0,1fr)
+            minmax(0,1fr);
+
+        width:100%;
+
+        max-width:100%;
+
+        gap:10px;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .schedule-card .time-row .input-group{
+
+        width:100%;
+
+        min-width:0;
+
+        max-width:100%;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .schedule-card input[type="time"]{
+
+        width:100%;
+
+        max-width:100%;
+
+        min-width:0;
+
+        height:50px;
+
+        padding-left:10px;
+
+        padding-right:10px;
+
+        font-size:13px;
+
+        -webkit-appearance:none;
+
+        appearance:none;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .schedule-card textarea{
+
+        min-height:90px;
+
+        font-size:13px;
+
+    }
+
+
+    #saveScheduleBtn{
+
+        width:100%;
+
+        max-width:100%;
+
+        box-sizing:border-box;
+
+    }
+
+}

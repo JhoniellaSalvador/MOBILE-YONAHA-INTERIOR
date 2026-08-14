@@ -1,0 +1,201 @@
+/* ==========================================================
+   TODAY'S SCHEDULE
+========================================================== */
+
+.today-schedule{
+
+    background:#1F1F1F;
+    border:1px solid #2F2F2F;
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:20px;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.today-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+    padding-bottom:12px;
+    border-bottom:1px solid #333;
+
+}
+
+.today-title{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.today-title i{
+
+    color:#D4AF37;
+    font-size:20px;
+
+}
+
+.today-title h3{
+
+    margin:0;
+    color:#FFFFFF;
+    font-size:18px;
+    font-weight:700;
+
+}
+
+.today-badge{
+
+    background:#3A3A3A;
+    color:#FFFFFF;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.today-content{
+
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:16px;
+    align-items:start;
+
+}
+
+/* ==========================================================
+   LEFT CARD
+========================================================== */
+
+.today-icon-card{
+
+    background:#252525;
+    border:1px solid #333;
+    border-radius:12px;
+
+    height:150px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.today-icon-card i{
+
+    color:#D4AF37;
+    font-size:40px;
+    margin-bottom:10px;
+
+}
+
+.today-icon-card span{
+
+    color:#FFFFFF;
+    font-size:14px;
+    font-weight:700;
+    text-align:center;
+    line-height:1.2;
+
+}
+
+/* ==========================================================
+   INFORMATION
+========================================================== */
+
+.today-info{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+
+}
+
+.today-item{
+
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+
+}
+
+.today-item label{
+
+    color:#9E9E9E;
+    font-size:11px;
+    font-weight:500;
+
+}
+
+.today-item span{
+
+    color:#FFFFFF;
+    font-size:13px;
+    font-weight:600;
+    word-break:break-word;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .today-content{
+
+        grid-template-columns:75px 1fr;
+
+    }
+
+    .today-icon-card{
+
+        height:140px;
+
+    }
+
+    .today-icon-card i{
+
+        font-size:34px;
+
+    }
+
+    .today-icon-card span{
+
+        font-size:13px;
+
+    }
+
+    .today-info{
+
+        gap:10px;
+
+    }
+
+    .today-item label{
+
+        font-size:10px;
+
+    }
+
+    .today-item span{
+
+        font-size:12px;
+
+    }
+
+}

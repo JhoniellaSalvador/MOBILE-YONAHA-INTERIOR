@@ -1,0 +1,137 @@
+/* ==========================================================
+   YONAHA INTERIOR
+   GLOBAL STYLE
+========================================================== */
+
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+}
+
+
+html,
+body{
+
+    width:100%;
+
+    min-height:100%;
+
+    background:#111111;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ==========================
+   APP WRAPPER
+========================== */
+
+.app{
+
+    width:100%;
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================
+   HIDE DEFAULT
+========================== */
+
+section{
+
+    width:100%;
+
+}
+
+
+/* ==========================
+   BUTTON RESET
+========================== */
+
+button{
+
+    font-family:inherit;
+
+}
+
+
+/* ==========================
+   INPUT RESET
+========================== */
+
+input{
+
+    font-family:inherit;
+
+}
+
+
+/* ==========================
+   LINKS
+========================== */
+
+a{
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================
+   SPLASH FIX
+========================== */
+
+#splashScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+}
+
+
+/* ==========================
+   MOBILE FIX
+========================== */
+
+@media(max-width:480px){
+
+    .login-title,
+    .register-page .login-title,
+    .forgot-page .login-title{
+
+        font-size:28px;
+
+    }
+
+
+    .login-card,
+    #registerForm,
+    #forgotForm{
+
+        max-width:100%;
+
+    }
+
+}

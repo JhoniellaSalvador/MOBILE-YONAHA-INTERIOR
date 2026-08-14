@@ -1,0 +1,288 @@
+/* ==========================================================
+   RECENT SCHEDULE
+========================================================== */
+
+.recent-schedule{
+
+    background:#1F1F1F;
+
+    border:1px solid #2F2F2F;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:20px;
+
+    min-height:285px;
+
+    box-sizing:border-box;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.recent-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:28px;
+
+}
+
+.recent-title{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+}
+
+.recent-title i{
+
+    color:#D4AF37;
+    font-size:18px;
+
+}
+
+.recent-title h3{
+
+    margin:0;
+    color:#FFF;
+    font-size:20px;
+    font-weight:700;
+
+}
+
+#viewAllHistory{
+
+    color:#D4AF37;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   LIST
+========================================================== */
+
+#recentScheduleContent{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    margin-top:4px;
+
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+
+}
+
+/* ==========================================================
+   RECENT CARD
+========================================================== */
+
+.recent-card{
+
+    display:grid;
+
+    grid-template-columns:58px 1fr auto;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:8px;
+
+    background:#252525;
+
+    border:1px solid #2F2F2F;
+
+    border-radius:12px;
+
+    padding:10px 12px;
+
+    min-height:74px;
+
+    transition:.25s;
+
+}
+
+.recent-card:hover{
+
+    border-color:#D4AF37;
+
+}
+
+/* ==========================================================
+   DATE BOX
+========================================================== */
+
+.recent-date{
+
+    width:58px;
+
+    min-width:58px;
+
+    height:64px;
+
+    background:#181818;
+
+    border:1px solid #2F2F2F;
+
+    border-radius:10px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.recent-day{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+    line-height:1;
+
+    margin:2px 0;
+
+}
+
+.recent-month{
+
+    color:#9A9A9A;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.recent-year{
+
+    color:#7A7A7A;
+
+    font-size:9px;
+
+    margin-top:2px;
+
+}
+
+/* ==========================================================
+   RECENT INFO
+========================================================== */
+
+.recent-info{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:3px;
+
+    overflow:hidden;
+
+}
+
+.recent-info h4{
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.recent-info p{
+
+    margin:0;
+
+    color:#9A9A9A;
+
+    font-size:11px;
+
+    line-height:1.4;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+/* ==========================================================
+   STATUS BADGE
+========================================================== */
+
+.recent-status{
+
+    min-width:82px;
+
+    height:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================================
+   EMPTY
+========================================================== */
+
+#recentScheduleContent>p{
+
+    text-align:center;
+    color:#888;
+    padding:20px;
+
+}

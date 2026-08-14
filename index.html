@@ -1,0 +1,3476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>YONAHA INTERIOR</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#050608">
+
+<!-- ==========================================================
+     iOS / iPHONE PWA
+========================================================== -->
+
+<link rel="apple-touch-icon" href="images/icon-192.png">
+
+<meta
+    name="apple-mobile-web-app-capable"
+    content="yes">
+
+<meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent">
+
+<meta
+    name="apple-mobile-web-app-title"
+    content="YONAHA INTERIOR">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/splash.css">
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/register.css">
+<link rel="stylesheet" href="css/forgot.css">
+
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/todaySchedule.css">
+<link rel="stylesheet" href="css/monthlyOverview.css">
+<link rel="stylesheet" href="css/recentSchedule.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/schedule.css">
+<link rel="stylesheet" href="css/history.css">
+<link rel="stylesheet" href="css/salary.css">
+<link rel="stylesheet" href="css/export-monthly-data.css">
+<link rel="stylesheet" href="css/import-monthly-data.css">
+<link rel="stylesheet" href="css/pdf-reports.css">
+<link rel="stylesheet" href="css/reports.css">
+<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="css/change-password.css">
+<link rel="stylesheet" href="css/currency.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- ==========================================================
+     EXCEL EXPORT LIBRARY
+========================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js">
+</script>
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         SPLASH SCREEN
+    =========================================== -->
+
+    <section id="splashScreen" class="splash-screen">
+
+        <img
+            src="images/logo.png"
+            alt="YONAHA Logo"
+            class="splash-logo">
+
+        <h1>
+
+            YONAHA INTERIOR
+
+        </h1>
+
+        <p>
+
+            Flooring Schedule Manager
+
+        </p>
+
+    </section>
+
+    <!-- ==========================================
+         APP
+    =========================================== -->
+
+    <div id="authApp" class="app" style="display:none;">
+
+<!-- =======================================================
+     LOGIN PAGE
+======================================================= -->
+
+<section id="loginPage" class="login-page">
+
+    <!-- Logo -->
+
+    <img
+        src="images/logo.png"
+        class="login-logo"
+        alt="Logo">
+
+    <!-- Title -->
+
+    <h1 class="login-title">
+
+    YONAHA INTERIOR
+
+</h1>
+
+<p class="login-subtitle">
+
+    Flooring Schedule Manager
+
+</p>
+
+    <!-- Login Card -->
+
+    <div class="login-card">
+
+        <!-- Username -->
+
+        <div class="input-group">
+
+            <i class="fa-solid fa-user"></i>
+
+            <input
+                id="loginUsername"
+                type="text"
+                placeholder="Username">
+
+        </div>
+
+        <!-- Password -->
+
+        <div class="input-group">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <input
+                id="loginPassword"
+                type="password"
+                placeholder="Password">
+
+            <i
+                id="togglePassword"
+                class="fa-solid fa-eye toggle-password"></i>
+
+        </div>
+
+        <!-- Remember -->
+
+        <div class="remember-row">
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="rememberMe">
+
+                Remember Me
+
+            </label>
+
+        </div>
+
+        <!-- Login -->
+
+        <button
+    type="button"
+    id="loginBtn"
+    class="login-btn">
+
+    Log in
+
+</button>
+
+<!-- Forgot -->
+
+<div class="forgot-link">
+
+    <span id="openForgot">
+
+        Forgot Password?
+
+    </span>
+
+</div>
+
+        <!-- Register -->
+
+        <div class="register-link">
+
+    Don't have an account?
+
+    <span id="openRegister">Register</span>
+
+</div>
+
+    </div>
+
+</section>
+
+<!-- =======================================================
+     END LOGIN PAGE
+======================================================= -->
+
+<!-- =======================================================
+     REGISTER PAGE
+======================================================= -->
+
+<section id="registerPage" class="register-page" style="display:none;">
+
+    <div class="register-container">
+
+        <!-- LOGO -->
+
+        <img
+            src="images/logo.png"
+            alt="YONAHA INTERIOR Logo"
+            class="login-logo">
+
+        <!-- TITLE -->
+
+        <h1 class="login-title">
+
+            YONAHA INTERIOR
+
+        </h1>
+
+        <p class="login-subtitle">
+
+            Flooring Schedule Manager
+
+        </p>
+
+        <!-- REGISTER FORM -->
+
+        <form id="registerForm">
+
+            <div class="input-group">
+
+    <i class="fa-solid fa-user"></i>
+
+    <input
+        type="text"
+        id="registerFullName"
+        placeholder="Full Name"
+        required>
+
+</div>
+
+            <div class="input-group">
+
+    <i class="fa-solid fa-envelope"></i>
+
+    <input
+        type="email"
+        id="registerEmail"
+        placeholder="Email Address"
+        required>
+
+</div>
+
+            <div class="input-group">
+
+    <i class="fa-solid fa-user"></i>
+
+    <input
+        type="text"
+        id="registerUsername"
+        placeholder="Username"
+        required>
+
+</div>
+
+            <div class="input-group">
+
+    <i class="fa-solid fa-lock"></i>
+
+    <input
+        type="password"
+        id="registerPassword"
+        placeholder="Password"
+        required>
+
+    <i
+        id="toggleRegisterPassword"
+        class="fa-solid fa-eye toggle-password"></i>
+
+</div>
+
+<div class="input-group">
+
+    <i class="fa-solid fa-lock"></i>
+
+    <input
+        type="password"
+        id="registerConfirmPassword"
+        placeholder="Confirm Password"
+        required>
+
+    <i
+        id="toggleRegisterConfirmPassword"
+        class="fa-solid fa-eye toggle-password"></i>
+
+</div>
+
+            <button
+                type="submit"
+                id="createAccountBtn">
+
+                CREATE ACCOUNT
+
+            </button>
+
+        </form>
+
+        <p class="login-link">
+
+    Already have an account?
+    <a href="#" id="goToLogin">Login</a>
+
+</p>
+
+    </div>
+
+</section>
+
+<!-- =======================================================
+     END REGISTER PAGE
+======================================================= -->
+
+<!-- =======================================================
+     FORGOT PASSWORD PAGE
+======================================================= -->
+
+<section id="forgotPage" class="forgot-page" style="display:none;">
+
+    <div class="forgot-container">
+
+        <!-- Logo -->
+
+        <img
+            src="images/logo.png"
+            class="login-logo"
+            alt="Logo">
+
+        <!-- Title -->
+
+        <h1 class="login-title">
+
+            YONAHA INTERIOR
+
+        </h1>
+
+        <p class="login-subtitle">
+
+            Flooring Schedule Manager
+
+        </p>
+
+        <!-- Forgot Form -->
+
+        <form id="forgotForm">
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="forgotEmail"
+                    placeholder="Email Address"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                id="resetPasswordBtn">
+
+                SEND RESET LINK
+
+            </button>
+
+        </form>
+
+        <p class="login-link">
+
+            Remember your password?
+            <a href="#" id="backToLogin">
+
+                Login
+
+            </a>
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =======================================================
+     END FORGOT PASSWORD PAGE
+======================================================= -->
+
+<!-- =======================================================
+     MAIN APPLICATION
+======================================================= -->
+
+<div id="app" class="app" style="display:none;">
+
+<!-- ==================================================
+     DASHBOARD PAGE
+================================================== -->
+
+<section
+    id="dashboardPage"
+    class="page-section"
+>
+
+
+    <!-- ================= DASHBOARD HEADER ================= -->
+
+    <div class="dashboard-header">
+
+        <div class="dashboard-header-left">
+
+            <h2 id="dashboardGreeting"></h2>
+
+        </div>
+
+
+        <div class="dashboard-header-right">
+
+            <div id="liveDate"></div>
+
+            <div id="liveTime"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SUMMARY CARDS ================= -->
+
+    <div class="dashboard-summary">
+
+
+        <!-- TOTAL SCHEDULE -->
+
+        <div class="summary-card">
+
+            <span
+                class="summary-title"
+                id="txtTotalSchedule"
+            >
+                Total Schedule
+            </span>
+
+            <div class="summary-value">
+
+                <i class="fa-solid fa-clipboard-list"></i>
+
+                <h3 id="totalScheduleCount">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- WORK -->
+
+        <div class="summary-card">
+
+            <span
+                class="summary-title"
+                id="txtWork"
+            >
+                Work
+            </span>
+
+            <div class="summary-value">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h3 id="workCount">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- DAY OFF -->
+
+        <div class="summary-card">
+
+            <span
+                class="summary-title"
+                id="txtDayOff"
+            >
+                Day Off
+            </span>
+
+            <div class="summary-value">
+
+                <i class="fa-solid fa-mug-hot"></i>
+
+                <h3 id="dayOffCount">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOLIDAY -->
+
+        <div class="summary-card">
+
+            <span
+                class="summary-title"
+                id="txtHoliday"
+            >
+                Holiday
+            </span>
+
+            <div class="summary-value">
+
+                <i class="fa-solid fa-umbrella-beach"></i>
+
+                <h3 id="holidayCount">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ================= TODAY'S SCHEDULE ================= -->
+
+    <div class="today-schedule dashboard-section">
+
+
+        <!-- TODAY HEADER -->
+
+        <div class="today-header">
+
+
+            <div class="today-title">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h3 id="txtTodaySchedule">
+                    Today's Schedule
+                </h3>
+
+            </div>
+
+
+            <span
+                id="todayStatusBadge"
+                class="today-badge"
+            >
+                No Schedule
+            </span>
+
+
+        </div>
+
+
+        <!-- TODAY CONTENT -->
+
+        <div id="todayScheduleContent">
+
+
+            <div class="today-content">
+
+
+                <!-- LEFT CARD -->
+
+                <div class="today-icon-card">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>
+                        NO<br>SCHEDULE
+                    </span>
+
+                </div>
+
+
+                <!-- RIGHT INFORMATION -->
+
+                <div class="today-info">
+
+
+                    <!-- DATE -->
+
+                    <div class="today-item">
+
+                        <label id="lblDate">
+                             Date
+                        </label>
+
+                        <span id="todayDate">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="today-item">
+
+                        <label id="lblLocation">
+                             Location
+                        </label>
+
+                        <span id="todayLocation">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <!-- BUILDING -->
+
+                    <div class="today-item">
+
+                        <label id="lblBuilding">
+                             Building
+                        </label>
+
+                        <span id="todayBuilding">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <!-- ENGINEER -->
+
+                    <div class="today-item">
+
+                        <label id="lblEngineer">
+                             Engineer
+                        </label>
+
+                        <span id="todayEngineer">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <!-- GENERAL CONTRACTOR -->
+
+                    <div class="today-item">
+
+                        <label id="lblGenCon">
+                             General Contractor
+                        </label>
+
+                        <span id="todayGenCon">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <!-- FLOORING -->
+
+                    <div class="today-item">
+
+                        <label id="lblFlooring">
+                             Flooring Type
+                        </label>
+
+                        <span id="todayFlooring">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <!-- SCHEDULE TYPE -->
+
+                    <div class="today-item">
+
+                        <label id="lblScheduleType">
+                             Schedule Type
+                        </label>
+
+                        <span id="todayType">
+                            --
+                        </span>
+
+                    </div>
+
+                    <!-- TIME IN -->
+
+                    <div class="today-item">
+
+                        <label id="lblTimeIn">
+                             Time In
+                        </label>
+
+                        <span id="todayTimeIn">
+                            --:--
+                        </span>
+
+                    </div>
+
+                    <!-- TIME OUT -->
+
+                    <div class="today-item">
+
+                        <label id="lblTimeOut">
+                             Time Out
+                        </label>
+
+                        <span id="todayTimeOut">
+                            --:--
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= MONTHLY OVERVIEW ================= -->
+
+    <div class="overview-header">
+
+        <h3>
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <span id="txtMonthlyOverview">
+                Monthly Overview
+            </span>
+
+        </h3>
+
+        <span id="overviewMonth"></span>
+
+    </div>
+
+    <div id="monthlyOverviewTimeline"></div>
+
+    <!-- ================= RECENT SCHEDULE ================= -->
+
+    <div class="recent-header">
+
+        <div class="recent-title">
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            <h3 id="txtRecentSchedule">
+                Recent Schedule
+            </h3>
+
+        </div>
+
+        <a
+            href="#"
+            id="viewAllHistory"
+        >
+            View All
+        </a>
+
+    </div>
+
+
+    <div id="recentScheduleContent">
+
+        <!-- JavaScript will render recent schedules here -->
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     SCHEDULE PAGE
+========================================================== -->
+
+<section id="schedulePage" class="page-section">
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="schedule-header">
+
+        <h2 id="scheduleTitle">
+            Schedule
+        </h2>
+
+        <p id="scheduleSubtitle">
+            Add your flooring schedule
+        </p>
+
+    </div>
+
+
+    <!-- ================= FORM ================= -->
+
+    <div class="schedule-card">
+
+        <!-- DATE -->
+
+        <div class="input-group">
+
+            <label
+                id="lblScheduleDate"
+                for="scheduleDate">
+
+                Date
+
+            </label>
+
+            <input
+                type="date"
+                id="scheduleDate">
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="input-group">
+
+            <label
+                id="lblScheduleLocation"
+                for="scheduleLocation">
+
+                Location
+
+            </label>
+
+            <input
+                type="text"
+                id="scheduleLocation"
+                placeholder="Enter location">
+
+        </div>
+
+
+        <!-- BUILDING -->
+
+        <div class="input-group">
+
+            <label
+                id="lblScheduleBuilding"
+                for="scheduleBuilding">
+
+                Building
+
+            </label>
+
+            <input
+                type="text"
+                id="scheduleBuilding"
+                placeholder="Enter building">
+
+        </div>
+
+
+        <!-- ENGINEER -->
+
+        <div class="input-group">
+
+            <label
+                id="lblScheduleEngineer"
+                for="scheduleEngineer">
+
+                Engineer
+
+            </label>
+
+            <input
+                type="text"
+                id="scheduleEngineer"
+                placeholder="Enter engineer">
+
+        </div>
+
+
+        <!-- GENERAL CONTRACTOR -->
+
+        <div class="input-group">
+
+            <label
+                id="lblScheduleGenCon"
+                for="scheduleGenCon">
+
+                General Contractor
+
+            </label>
+
+            <input
+                type="text"
+                id="scheduleGenCon"
+                placeholder="Enter general contractor">
+
+        </div>
+
+
+        <!-- FLOORING -->
+
+        <div class="input-group">
+
+            <label
+                id="lblScheduleFlooring"
+                for="scheduleFlooring">
+
+                Flooring Type
+
+            </label>
+
+            <input
+                type="text"
+                id="scheduleFlooring"
+                placeholder="Enter flooring type">
+
+        </div>
+
+
+        <!-- SCHEDULE TYPE -->
+
+        <div class="input-group">
+
+            <label
+                id="lblScheduleType2"
+                for="scheduleType">
+
+                Schedule Type
+
+            </label>
+
+            <select id="scheduleType">
+
+                <option value="">
+                    Select schedule type
+                </option>
+
+                <option value="Installation">
+                    Installation
+                </option>
+
+                <option value="Repair">
+                    Repair
+                </option>
+
+                <option value="Inspection">
+                    Inspection
+                </option>
+
+                <option value="Measurement">
+                    Measurement
+                </option>
+
+                <option value="Maintenance">
+                    Maintenance
+                </option>
+
+                <option value="Meeting">
+                    Meeting
+                </option>
+
+                <option value="Site Visit">
+                    Site Visit
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- STATUS -->
+
+        <div class="input-group">
+
+            <label
+                id="lblScheduleStatus"
+                for="scheduleStatus">
+
+                Status
+
+            </label>
+
+            <select id="scheduleStatus">
+
+                <option value="">
+                    Select status
+                </option>
+
+                <option value="Work">
+                    Work
+                </option>
+
+                <option value="Day Off">
+                    Day Off
+                </option>
+
+                <option value="Holiday">
+                    Holiday
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- TIME -->
+
+        <div class="time-row">
+
+            <div class="input-group">
+
+                <label
+                    id="lblScheduleTimeIn"
+                    for="scheduleTimeIn">
+
+                    Time In
+
+                </label>
+
+                <input
+                    type="time"
+                    id="scheduleTimeIn">
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label
+                    id="lblScheduleTimeOut"
+                    for="scheduleTimeOut">
+
+                    Time Out
+
+                </label>
+
+                <input
+                    type="time"
+                    id="scheduleTimeOut">
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTES -->
+
+        <div class="input-group">
+
+            <label
+                id="lblScheduleNotes"
+                for="scheduleNotes">
+
+                Notes
+
+            </label>
+
+            <textarea
+                id="scheduleNotes"
+                placeholder="Enter notes..."></textarea>
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <button
+            type="button"
+            id="saveScheduleBtn">
+
+            <span id="txtSaveSchedule">
+                SAVE SCHEDULE
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     HISTORY PAGE
+========================================================== -->
+
+<section id="historyPage" class="page-section">
+
+<!-- ==================================================
+     HISTORY HEADER
+=================================================== -->
+
+<div class="history-header">
+
+    <!-- ================= TITLE ================= -->
+
+    <div class="history-title">
+
+        <h2 id="historyTitle">
+            History
+        </h2>
+
+        <p id="historySubtitle">
+            View all saved schedules
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     HISTORY CONTENT CARD
+=================================================== -->
+
+<div class="history-content-card">
+
+
+    <!-- ==================================================
+         SEARCH + FILTER TOOLBAR
+    =================================================== -->
+
+    <div class="history-toolbar">
+
+        <!-- ================= SEARCH ================= -->
+
+        <div class="history-search">
+
+            <i class="fas fa-search"></i>
+
+            <input
+                type="text"
+                id="historySearch"
+                placeholder="Search schedule..."
+                autocomplete="off">
+
+        </div>
+
+
+        <!-- ================= FILTER BUTTON ================= -->
+
+        <button
+            type="button"
+            id="historyFilterBtn"
+            class="history-filter-btn">
+
+            <i class="fas fa-filter"></i>
+
+            <span id="historyFilterText">
+                Filters
+            </span>
+
+        </button>
+
+
+        <!-- ==================================================
+             FILTER PANEL
+        =================================================== -->
+
+        <div
+            id="historyFilterPanel"
+            class="history-filter-panel">
+
+
+            <!-- ================= MONTH ================= -->
+
+            <select id="historyMonthFilter">
+
+                <option
+                    value=""
+                    id="historyMonthAll">
+
+                    All Months
+
+                </option>
+
+                <option value="01">
+                    January
+                </option>
+
+                <option value="02">
+                    February
+                </option>
+
+                <option value="03">
+                    March
+                </option>
+
+                <option value="04">
+                    April
+                </option>
+
+                <option value="05">
+                    May
+                </option>
+
+                <option value="06">
+                    June
+                </option>
+
+                <option value="07">
+                    July
+                </option>
+
+                <option value="08">
+                    August
+                </option>
+
+                <option value="09">
+                    September
+                </option>
+
+                <option value="10">
+                    October
+                </option>
+
+                <option value="11">
+                    November
+                </option>
+
+                <option value="12">
+                    December
+                </option>
+
+            </select>
+
+
+            <!-- ================= YEAR ================= -->
+
+            <select id="historyYearFilter">
+
+                <option
+                    value=""
+                    id="historyYearAll">
+
+                    All Years
+
+                </option>
+
+            </select>
+
+
+            <!-- ================= STATUS ================= -->
+
+            <select id="historyStatusFilter">
+
+                <option
+                    value=""
+                    id="historyStatusAll">
+
+                    All Status
+
+                </option>
+
+                <option
+                    value="Work"
+                    id="historyStatusWork">
+
+                    Work
+
+                </option>
+
+                <option
+                    value="Day Off"
+                    id="historyStatusDayOff">
+
+                    Day Off
+
+                </option>
+
+                <option
+                    value="Holiday"
+                    id="historyStatusHoliday">
+
+                    Holiday
+
+                </option>
+
+            </select>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- ==================================================
+         HISTORY LIST
+         Cards are generated by history.js
+    =================================================== -->
+
+    <div
+        id="historyMobileList"
+        class="history-mobile-list">
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     SALARY PAGE
+========================================================== -->
+
+<div id="salaryPage" class="page">
+
+    <!-- ======================================================
+         SALARY HEADER
+    ======================================================= -->
+
+    <div class="schedule-header">
+
+        <h2 id="salaryTitle">
+            Salary
+        </h2>
+
+    </div>
+
+
+    <!-- ======================================================
+         SALARY TABS
+    ======================================================= -->
+
+    <div class="salary-tabs">
+
+        <button
+            type="button"
+            id="salaryFormTab"
+            class="salary-tab active">
+
+            <span id="salaryCreateTab">
+                Create Work
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            id="salaryLogsTab"
+            class="salary-tab">
+
+            <span id="salaryLogsTabText">
+                Work Logs
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            id="salaryAdvanceTab"
+            class="salary-tab">
+
+            <span id="salaryAdvanceTabText">
+                Advance
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            id="salaryAdvanceHistoryTab"
+            class="salary-tab">
+
+            <span id="salaryAdvanceHistoryTabText">
+                Advance History
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- ======================================================
+         1. CREATE WORK
+    ======================================================= -->
+
+    <div
+        id="salaryFormSection"
+        class="salary-section"
+        style="display:block;">
+
+        <div class="salary-card">
+
+            <!-- WORK DATE -->
+
+            <div class="input-group">
+
+                <label id="salaryWorkDateLabel">
+                    Work Date
+                </label>
+
+                <input
+                    type="date"
+                    id="salaryWorkDate">
+
+            </div>
+
+
+            <!-- ENGINEER -->
+
+            <div class="input-group">
+
+                <label id="salaryEngineerLabel">
+                    Engineer
+                </label>
+
+                <input
+                    type="text"
+                    id="salaryEngineer"
+                    placeholder="Engineer name">
+
+            </div>
+
+
+            <!-- GEN CON -->
+
+            <div class="input-group">
+
+                <label id="salaryGenConLabel">
+                    Gen. Con.
+                </label>
+
+                <input
+                    type="text"
+                    id="salaryGenCon"
+                    placeholder="General contractor">
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="input-group">
+
+                <label id="salaryLocationLabel">
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="salaryLocation"
+                    placeholder="Location">
+
+            </div>
+
+
+            <!-- PROJECT -->
+
+            <div class="input-group">
+
+                <label id="salaryProjectLabel">
+                    Project Name
+                </label>
+
+                <input
+                    type="text"
+                    id="salaryProject"
+                    placeholder="Project / Gemba name">
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="input-group">
+
+                <label id="salaryDescriptionLabel">
+                    Work Description
+                </label>
+
+                <input
+                    type="text"
+                    id="salaryDescription"
+                    placeholder="Work description">
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="input-group">
+
+                <label id="salaryQuantityLabel">
+                    Quantity
+                </label>
+
+                <input
+                    type="number"
+                    id="salaryQuantity"
+                    placeholder="0">
+
+            </div>
+
+
+            <!-- UNIT -->
+
+            <div class="input-group">
+
+                <label id="salaryUnitLabel">
+                    Unit
+                </label>
+
+                <select id="salaryUnit">
+
+                    <option value="">
+                        Select Unit
+                    </option>
+
+                    <option value="m²">
+                        m²
+                    </option>
+
+                    <option value="m">
+                        m
+                    </option>
+
+                    <option value="pcs">
+                        pcs
+                    </option>
+
+                    <option value="part">
+                        part
+                    </option>
+
+                    <option value="day">
+                        day
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- RATE -->
+
+            <div class="input-group">
+
+                <label id="salaryRateLabel">
+                   Rate
+                </label>
+
+                <input
+                    type="number"
+                    id="salaryRate"
+                    placeholder="0">
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <hr>
+
+
+            <div class="salary-summary-row">
+
+                <span id="salarySubtotalLabel">
+                    Subtotal
+                </span>
+
+                <strong id="salarySubtotal">
+                    ¥0
+                </strong>
+
+            </div>
+
+
+            <div class="salary-summary-row">
+
+                <span id="salaryTaxLabel">
+                    10%
+                </span>
+
+                <strong id="salaryTax">
+                    ¥0
+                </strong>
+
+            </div>
+
+
+            <div class="salary-summary-row total">
+
+                <span id="salaryTotalAmountLabel">
+                    Total
+                </span>
+
+                <strong id="salaryTotal">
+                    ¥0
+                </strong>
+
+            </div>
+
+
+            <!-- SAVE -->
+
+            <button
+                type="button"
+                id="saveSalaryBtn">
+
+                <span id="saveSalaryText">
+                    SAVE WORK
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================================
+         2. WORK LOGS
+    ======================================================= -->
+
+    <div
+        id="salaryLogsSection"
+        class="salary-section"
+        style="display:none;">
+
+        <h3 id="workLogsTitle">
+            Work Logs
+        </h3>
+
+
+        <!-- SEARCH + FILTER -->
+
+        <div class="history-toolbar">
+
+            <div class="history-search">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    id="salarySearch"
+                    placeholder="Search work..."
+                    autocomplete="off">
+
+            </div>
+
+
+            <button
+                type="button"
+                id="salaryFilterBtn"
+                class="history-filter-btn">
+
+                <i class="fas fa-filter"></i>
+
+                <span id="salaryFilterText">
+                    Filters
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- FILTER -->
+
+        <div
+            id="salaryFilterPanel"
+            class="history-filter-panel">
+
+            <select id="salaryStatusFilter">
+
+                <option
+                    value=""
+                    id="salaryAllStatus">
+
+                    All Status
+
+                </option>
+
+                <option
+                    value="Pending"
+                    id="salaryPending">
+
+                    Pending
+
+                </option>
+
+                <option
+                    value="Paid"
+                    id="salaryPaid">
+
+                    Paid
+
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- WORK LOG LIST -->
+
+        <div id="salaryHistoryList">
+
+            <p class="empty-history">
+                No work logs yet.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================================
+         3. ADVANCE
+    ======================================================= -->
+
+    <div
+        id="salaryAdvanceSection"
+        class="salary-section"
+        style="display:none;">
+
+        <div class="salary-card">
+
+            <div class="salary-form-grid">
+
+
+                <!-- ADVANCE DATE -->
+
+                <div class="input-group">
+
+                    <label>
+                        Advance Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="advanceDate">
+
+                </div>
+
+
+                <!-- GEN CON -->
+
+                <div class="input-group">
+
+                    <label>
+                        Gen. Con.
+                    </label>
+
+                    <select id="advanceGenCon">
+
+                        <option value="">
+                            Select Gen. Con.
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PROJECT -->
+
+                <div class="input-group">
+
+                    <label>
+                        Project Name
+                    </label>
+
+                    <select id="advanceProject">
+
+                        <option value="">
+                            Select Project
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ENGINEER -->
+
+                <div class="input-group">
+
+                    <label>
+                        Engineer
+                    </label>
+
+                    <select id="advanceEngineer">
+
+                        <option value="">
+                            Select Engineer
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- AMOUNT -->
+
+                <div class="input-group">
+
+                    <label>
+                        Amount (¥)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="advanceAmount"
+                        placeholder="0">
+
+                </div>
+
+
+                <!-- REASON -->
+
+                <div class="salary-group salary-full">
+
+                    <label>
+                        Reason (Optional)
+                    </label>
+
+                    <textarea
+                        id="advanceReason"
+                        rows="3"
+                        placeholder="Reason for salary advance..."></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- SAVE ADVANCE -->
+
+            <button
+                type="button"
+                id="saveAdvanceBtn">
+
+                SAVE ADVANCE
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================================
+         4. ADVANCE HISTORY
+    ======================================================= -->
+
+    <div
+        id="salaryAdvanceHistorySection"
+        class="salary-section"
+        style="display:none;">
+
+        <h3 id="salaryAdvanceHistoryTitle">
+            Advance History
+        </h3>
+
+
+        <!-- SEARCH + FILTER -->
+
+        <div class="history-toolbar">
+
+            <div class="history-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="advanceSearch"
+                    placeholder="Search advance history..."
+                    autocomplete="off">
+
+            </div>
+
+
+            <button
+                type="button"
+                class="history-filter-btn"
+                id="advanceFilterBtn">
+
+                <i class="fa-solid fa-filter"></i>
+
+                <span>
+                    Filter
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- FILTER PANEL -->
+
+        <div
+            class="history-filter-panel"
+            id="advanceFilterPanel">
+
+            <select id="advanceMonthFilter">
+
+                <option value="">
+                    All Months
+                </option>
+
+                <option value="0">
+                    January
+                </option>
+
+                <option value="1">
+                    February
+                </option>
+
+                <option value="2">
+                    March
+                </option>
+
+                <option value="3">
+                    April
+                </option>
+
+                <option value="4">
+                    May
+                </option>
+
+                <option value="5">
+                    June
+                </option>
+
+                <option value="6">
+                    July
+                </option>
+
+                <option value="7">
+                    August
+                </option>
+
+                <option value="8">
+                    September
+                </option>
+
+                <option value="9">
+                    October
+                </option>
+
+                <option value="10">
+                    November
+                </option>
+
+                <option value="11">
+                    December
+                </option>
+
+            </select>
+
+
+            <select id="advanceYearFilter">
+
+                <option value="">
+                    All Years
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ADVANCE HISTORY LIST -->
+
+        <div id="advanceHistoryList">
+
+            <p class="empty-history">
+                No salary advances yet.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================================
+     REPORTS PAGE
+========================================================== -->
+
+<div id="reportsPage" class="page">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="reports-header">
+
+        <h2 id="reportsTitle">Reports</h2>
+
+    </div>
+
+
+    <!-- ================= SEARCH + FILTER ================= -->
+
+    <div class="report-toolbar">
+
+        <!-- SEARCH -->
+
+        <div class="report-search">
+
+            <i class="fas fa-search"></i>
+
+            <input
+                type="text"
+                id="reportSearch"
+                placeholder="Search Gemba..."
+            >
+
+        </div>
+
+
+        <!-- FILTER -->
+
+        <div class="report-filter-wrapper">
+
+            <button
+                type="button"
+                id="reportFilterBtn"
+                class="history-filter-btn"
+            >
+
+                <i class="fas fa-filter"></i>
+
+                <span id="reportFilterText">Filters</span>
+
+            </button>
+
+
+            <!-- FILTER DROPDOWN -->
+
+            <div
+                id="reportFilterPanel"
+                class="report-filter-panel"
+            >
+
+                <!-- STATUS -->
+
+                <div class="report-filter-group">
+
+                    <select id="reportStatusFilter">
+
+                        <option
+                            id="reportStatusAll"
+                            value=""
+                        >
+                            All Status
+                        </option>
+
+                        <option
+                            id="reportStatusPending"
+                            value="Pending"
+                        >
+                            Pending
+                        </option>
+
+                        <option
+                            id="reportStatusPaid"
+                            value="Paid"
+                        >
+                            Paid
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MONTH -->
+
+                <div class="report-filter-group">
+
+                    <select id="reportMonthFilter">
+
+                        <option
+                            id="reportMonthAll"
+                            value=""
+                        >
+                            All Months
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= REPORT LIST ================= -->
+
+    <div
+        id="reportList"
+        class="report-list"
+    >
+
+    </div>
+
+
+</div>
+
+<!-- ==========================================================
+     PROFILE PAGE
+========================================================== -->
+
+<section id="profilePage" class="page-section" style="display:none;">
+
+<!-- ==========================================================
+     HEADER
+========================================================== -->
+<div class="profile-topbar">
+    <h2 class="profile-title">My Profile</h2>
+    <div class="profile-topbar-space"></div>
+</div>
+
+<!-- ==========================================================
+     USER INFORMATION
+========================================================== -->
+<div class="profile-user-box">
+
+    <div
+        class="avatar-placeholder"
+        id="profileAvatar"
+        onclick="openAvatarUpload()"
+        title="Change profile photo"
+    >
+
+        <img
+            id="profileAvatarImage"
+            src=""
+            alt="Profile Avatar"
+        >
+
+        <span id="profileAvatarPlaceholder">👤</span>
+
+        <!-- Camera Overlay -->
+        <span class="avatar-camera" aria-hidden="true">📷</span>
+
+        <input
+            type="file"
+            id="profileAvatarInput"
+            accept="image/jpeg,image/png,image/webp"
+            hidden
+            onchange="handleAvatarUpload(event)"
+        >
+
+    </div>
+
+    <h3 id="profileDisplayName">Tanaka</h3>
+    <p id="profileDisplayPosition">OWNER</p>
+
+</div>
+
+<!-- ==========================================================
+     SETTINGS LIST
+========================================================== -->
+<div class="profile-list">
+
+    <!-- Personal Information -->
+    <div class="profile-item" id="personalInfoCard">
+        <span>👤 Personal Information</span>
+        <span>›</span>
+    </div>
+
+    <!-- Language -->
+    <div class="profile-item" id="languageCard">
+        <span id="languageText">🌐 Language</span>
+        <span id="currentLanguage">English</span>
+    </div>
+
+    <!-- Currency -->
+    <div
+        class="profile-item"
+        id="currencyCard"
+        onclick="toggleCurrencySelector(event)"
+    >
+        <span>💴 Currency</span>
+        <span id="currencyArrow">›</span>
+    </div>
+
+    <!-- Currency Options -->
+    <div
+        class="currency-selector"
+        id="currencySelector"
+    >
+
+        <button
+            type="button"
+            onclick="selectCurrency('PHP', event)"
+        >
+            <span>Philippine Peso</span>
+            <strong>₱</strong>
+        </button>
+
+        <button
+            type="button"
+            onclick="selectCurrency('JPY', event)"
+        >
+            <span>Japanese Yen</span>
+            <strong>¥</strong>
+        </button>
+
+    </div>
+
+    <!-- Export Monthly Data -->
+    <div
+        class="profile-item"
+        id="exportCard"
+        onclick="showPage('exportMonthlyPage')"
+    >
+        <span>📤 Export Monthly Data</span>
+        <span>›</span>
+    </div>
+
+    <!-- Import Monthly Data -->
+    <div
+        class="profile-item"
+        id="importDataCard"
+        onclick="showPage('importDataPage')"
+    >
+        <span>📥 Import Monthly Data</span>
+        <span>›</span>
+    </div>
+
+    <!-- PDF Reports -->
+    <div
+        class="profile-item"
+        id="pdfReportsCard"
+        onclick="openPDFReportsPage()"
+    >
+        <span>📄 PDF Reports</span>
+        <span>›</span>
+    </div>
+
+    <!-- Change Password -->
+    <div
+        class="profile-item"
+        id="changePasswordCard"
+        onclick="openChangePasswordPage()"
+    >
+        <span>🔐 Change Password</span>
+        <span>›</span>
+    </div>
+
+    <!-- Logout -->
+    <div
+        class="profile-item logout-item"
+        id="logoutBtn"
+    >
+        <span>🚪 Logout</span>
+        <span>›</span>
+    </div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     END PROFILE PAGE
+========================================================== -->
+
+<!-- ==========================================================
+     PDF REPORTS PAGE
+========================================================== -->
+
+<section
+    id="pdfReportsPage"
+    class="page-section"
+    style="display:none;"
+>
+
+    <!-- PAGE HEADER -->
+<div class="profile-topbar pdf-reports-header">
+
+    <span
+        class="pdf-reports-back"
+        onclick="showPage('profilePage')"
+    >
+        ←
+    </span>
+
+    <h2 class="profile-title">
+        PDF Reports
+    </h2>
+
+    <div class="profile-topbar-space"></div>
+
+</div>
+
+
+    <!-- SEARCH & FILTER -->
+    <div class="pdf-reports-controls">
+
+        <!-- SEARCH -->
+        <div class="pdf-search-box">
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+    <input
+        type="text"
+        id="pdfReportSearch"
+        placeholder="Search month or year..."
+        autocomplete="off"
+    >
+
+</div>
+
+
+        <!-- MONTH FILTER -->
+        <select id="pdfReportMonth">
+
+            <option value="all">
+                All Months
+            </option>
+
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- PDF REPORTS LIST -->
+    <div
+        id="pdfReportsList"
+        class="pdf-reports-list"
+    >
+
+        <!-- PDF REPORTS WILL APPEAR HERE -->
+
+    </div>
+
+
+    <!-- EMPTY STATE -->
+    <div
+        id="pdfReportsEmpty"
+        class="pdf-reports-empty"
+        style="display:none;"
+    >
+
+        <div>
+            📄
+        </div>
+
+        <p>
+            No PDF reports found.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     END PDF REPORTS PAGE
+========================================================== -->
+
+<!-- ==========================================================
+     EXPORT MONTHLY DATA PAGE
+========================================================== -->
+
+<section
+    id="exportMonthlyPage"
+    class="page-section"
+    style="display:none;"
+>
+
+    <!-- PAGE HEADER -->
+
+    <div class="profile-topbar export-monthly-header">
+
+        <span
+            class="export-monthly-back"
+            onclick="showPage('profilePage')"
+        >
+            ←
+        </span>
+
+        <h2 class="profile-title">
+            Export Monthly Data
+        </h2>
+
+        <div class="profile-topbar-space"></div>
+
+    </div>
+
+
+    <!-- EXPORT OPTIONS -->
+
+    <div class="export-page-list">
+
+
+        <!-- SCHEDULE HISTORY -->
+
+        <div class="export-page-card">
+
+            <div class="export-page-info">
+
+                <strong>
+                    Schedule History
+                </strong>
+
+                <span>
+                    Export schedule records
+                </span>
+
+            </div>
+
+
+            <div class="export-page-controls">
+
+                <select id="pageScheduleExportMonth">
+
+                    <option value="all">
+                        All Month
+                    </option>
+
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+
+                </select>
+
+
+                <select id="pageScheduleExportYear">
+
+                    <option value="all">
+                        All Year
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="button"
+                    id="pageExportScheduleBtn"
+                    class="export-action-btn"
+                >
+                    Export
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SALARY WORK LOGS -->
+
+        <div class="export-page-card">
+
+            <div class="export-page-info">
+
+                <strong>
+                    Salary Work Logs
+                </strong>
+
+                <span>
+                    Export salary work records
+                </span>
+
+            </div>
+
+
+            <div class="export-page-controls">
+
+                <select id="pageSalaryExportMonth">
+
+                    <option value="all">
+                        All Month
+                    </option>
+
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+
+                </select>
+
+
+                <select id="pageSalaryExportYear">
+
+                    <option value="all">
+                        All Year
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="button"
+                    id="pageExportSalaryBtn"
+                    class="export-action-btn"
+                >
+                    Export
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SALARY ADVANCE HISTORY -->
+
+        <div class="export-page-card">
+
+            <div class="export-page-info">
+
+                <strong>
+                    Salary Advance History
+                </strong>
+
+                <span>
+                    Export salary advance records
+                </span>
+
+            </div>
+
+
+            <div class="export-page-controls">
+
+                <select id="pageAdvanceExportMonth">
+
+                    <option value="all">
+                        All Month
+                    </option>
+
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+
+                </select>
+
+                <select id="pageAdvanceExportYear">
+
+                    <option value="all">
+                        All Year
+                    </option>
+
+                </select>
+
+                <button
+                    type="button"
+                    id="pageExportAdvanceBtn"
+                    class="export-action-btn"
+                >
+                    Export
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     END OF EXPORT MONTHLY DATA PAGE
+========================================================== -->
+
+<!-- ==========================================================
+     IMPORT DATA PAGE
+========================================================== -->
+
+<section
+    id="importDataPage"
+    class="page-section"
+    style="display:none;"
+>
+    <!-- PAGE HEADER -->
+
+    <div class="profile-topbar import-data-header">
+
+        <span
+            class="import-data-back"
+            onclick="showPage('profilePage')"
+        >
+            ←
+        </span>
+
+        <h2 class="profile-title">
+            Import Data
+        </h2>
+
+        <div class="profile-topbar-space"></div>
+
+    </div>
+
+    <!-- IMPORT OPTIONS -->
+
+    <div class="import-page-list">
+
+        <!-- SCHEDULE HISTORY -->
+
+        <div class="import-page-card">
+
+            <div class="import-page-info">
+
+                <strong>
+                    Schedule History
+                </strong>
+
+                <span>
+                    Import schedule records
+                </span>
+
+            </div>
+
+            <div class="import-page-controls">
+
+                <input
+                    type="file"
+                    id="pageImportScheduleFile"
+                    accept=".xlsx,.xls,.csv"
+                    hidden
+                >
+
+                <button
+                    type="button"
+                    id="pageImportScheduleBtn"
+                    class="import-action-btn"
+                >
+                    Import
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- SALARY WORK LOGS -->
+
+        <div class="import-page-card">
+
+            <div class="import-page-info">
+
+                <strong>
+                    Salary Work Logs
+                </strong>
+
+                <span>
+                    Import salary work records
+                </span>
+
+            </div>
+
+            <div class="import-page-controls">
+
+                <input
+                    type="file"
+                    id="pageImportSalaryFile"
+                    accept=".xlsx,.xls,.csv"
+                    hidden
+                >
+
+                <button
+                    type="button"
+                    id="pageImportSalaryBtn"
+                    class="import-action-btn"
+                >
+                    Import
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- SALARY ADVANCE HISTORY -->
+
+        <div class="import-page-card">
+
+            <div class="import-page-info">
+
+                <strong>
+                    Salary Advance History
+                </strong>
+
+                <span>
+                    Import salary advance records
+                </span>
+
+            </div>
+
+            <div class="import-page-controls">
+
+                <input
+                    type="file"
+                    id="pageImportAdvanceFile"
+                    accept=".xlsx,.xls,.csv"
+                    hidden
+                >
+
+                <button
+                    type="button"
+                    id="pageImportAdvanceBtn"
+                    class="import-action-btn"
+                >
+                    Import
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     END IMPORT DATA PAGE
+========================================================== -->
+
+<!-- ==========================================================
+     CHANGE PASSWORD PAGE
+========================================================== -->
+
+<section
+    id="changePasswordPage"
+    class="page-section"
+    style="display:none;"
+>
+
+    <!-- ======================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <div class="page-header change-password-header">
+
+        <button
+            type="button"
+            class="change-password-back"
+            onclick="goBackFromChangePassword()"
+            aria-label="Back"
+        >
+            ←
+        </button>
+
+        <h2>
+            🔐 Change Password
+        </h2>
+
+    </div>
+
+    <!-- ======================================================
+         CHANGE PASSWORD CONTAINER
+    ====================================================== -->
+
+    <div class="change-password-container">
+
+        <div class="change-password-card">
+
+            <!-- ==================================================
+                 TITLE
+            ================================================== -->
+
+            <div class="change-password-title">
+                Change Password
+            </div>
+
+            <!-- ==================================================
+                 SUBTITLE
+            ================================================== -->
+
+            <div class="change-password-subtitle">
+                Update your account password securely.
+            </div>
+
+            <!-- ==================================================
+                 CURRENT PASSWORD
+            ================================================== -->
+
+            <div class="change-password-field">
+
+                <label for="currentPassword">
+                    Current Password
+                </label>
+
+                <input
+                    type="password"
+                    id="currentPassword"
+                    autocomplete="current-password"
+                    placeholder="Enter current password"
+                >
+
+            </div>
+
+            <!-- ==================================================
+                 NEW PASSWORD
+            ================================================== -->
+
+            <div class="change-password-field">
+
+                <label for="newPassword">
+                    New Password
+                </label>
+
+                <input
+                    type="password"
+                    id="newPassword"
+                    autocomplete="new-password"
+                    placeholder="Enter new password"
+                >
+
+            </div>
+
+            <!-- ==================================================
+                 CONFIRM NEW PASSWORD
+            ================================================== -->
+
+            <div class="change-password-field">
+
+
+                <label for="confirmNewPassword">
+                    Confirm New Password
+                </label>
+
+
+                <input
+                    type="password"
+                    id="confirmNewPassword"
+                    autocomplete="new-password"
+                    placeholder="Confirm new password"
+                >
+
+            </div>
+
+            <!-- ==================================================
+                 ACTIONS
+            ================================================== -->
+
+            <div class="change-password-actions">
+
+                <button
+                    type="button"
+                    class="change-password-cancel"
+                    onclick="goBackFromChangePassword()"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    id="updatePasswordBtn"
+                    class="change-password-update"
+                >
+                    Update Password
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     END CHANGE PASSWORD PAGE
+========================================================== -->
+
+<!-- ==========================================================
+     PERSONAL INFORMATION PAGE
+========================================================== -->
+
+<section
+    id="personalInfoPage"
+    class="page-section"
+    style="display:none;"
+>
+
+    <!-- ======================================================
+         HEADER
+    ====================================================== -->
+
+    <div class="personal-header">
+
+        <button
+            type="button"
+            id="backToProfileBtn"
+            class="back-arrow"
+            aria-label="Back to Profile"
+        >
+            ←
+        </button>
+
+
+        <h2
+            class="personal-title"
+            id="personalInfoTitle"
+        >
+            Personal Information
+        </h2>
+
+
+        <span
+            id="editInfoBtn"
+            class="edit-text"
+            role="button"
+            tabindex="0"
+        >
+            Edit
+        </span>
+
+    </div>
+
+
+    <!-- ======================================================
+         INFORMATION FORM
+    ====================================================== -->
+
+    <div class="profile-form">
+
+
+        <!-- ==================================================
+             FULL NAME
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profileFullNameInput"
+                id="profileFullNameLabel"
+            >
+                Full Name
+            </label>
+
+            <span
+                class="profile-value"
+                id="profileFullNameText"
+            >
+                Juan Dela Cruz
+            </span>
+
+            <input
+                type="text"
+                id="profileFullNameInput"
+                class="profile-edit-input"
+                autocomplete="name"
+                style="display:none;"
+            >
+
+        </div>
+
+
+        <!-- ==================================================
+             USERNAME
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profileUsernameInput"
+                id="profileUsernameLabel"
+            >
+                Username
+            </label>
+
+            <span
+                class="profile-value"
+                id="profileUsernameText"
+            >
+                admin
+            </span>
+
+            <input
+                type="text"
+                id="profileUsernameInput"
+                class="profile-edit-input"
+                autocomplete="username"
+                style="display:none;"
+            >
+
+        </div>
+
+
+        <!-- ==================================================
+             POSITION
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profilePositionInput"
+                id="profilePositionLabel"
+            >
+                Position
+            </label>
+
+            <span
+                class="profile-value"
+                id="profilePositionText"
+            >
+                Project Manager
+            </span>
+
+            <input
+                type="text"
+                id="profilePositionInput"
+                class="profile-edit-input"
+                style="display:none;"
+            >
+
+        </div>
+
+
+        <!-- ==================================================
+             EMAIL
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profileEmailInput"
+                id="profileEmailLabel"
+            >
+                Email
+            </label>
+
+            <span
+                class="profile-value"
+                id="profileEmailText"
+            >
+                admin@email.com
+            </span>
+
+            <input
+                type="email"
+                id="profileEmailInput"
+                class="profile-edit-input"
+                autocomplete="email"
+                style="display:none;"
+            >
+
+        </div>
+
+
+        <!-- ==================================================
+             COUNTRY
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profileCountryInput"
+                id="profileCountryLabel"
+            >
+                Country
+            </label>
+
+            <span
+                class="profile-value"
+                id="profileCountryText"
+            >
+                Japan 🇯🇵
+            </span>
+
+            <select
+                id="profileCountryInput"
+                class="profile-edit-input"
+                style="display:none;"
+            >
+
+                <option value="Japan">
+                    🇯🇵 Japan
+                </option>
+
+                <option value="Philippines">
+                    🇵🇭 Philippines
+                </option>
+
+                <option value="United States">
+                    🇺🇸 United States
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ==================================================
+             PHONE NUMBER
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profilePhoneInput"
+                id="profilePhoneLabel"
+            >
+                Phone Number
+            </label>
+
+            <span
+                class="profile-value"
+                id="profilePhoneText"
+            >
+                +81 90-1234-5678
+            </span>
+
+            <input
+                type="text"
+                id="profilePhoneInput"
+                class="profile-edit-input"
+                autocomplete="tel"
+                style="display:none;"
+            >
+
+        </div>
+
+
+        <!-- ==================================================
+             ADDRESS
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profileAddressInput"
+                id="profileAddressLabel"
+            >
+                Address
+            </label>
+
+            <span
+                class="profile-value"
+                id="profileAddressText"
+            >
+                Tokyo, Japan
+            </span>
+
+            <input
+                type="text"
+                id="profileAddressInput"
+                class="profile-edit-input"
+                autocomplete="street-address"
+                style="display:none;"
+            >
+
+        </div>
+
+
+        <!-- ==================================================
+             GENDER
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profileGenderInput"
+                id="profileGenderLabel"
+            >
+                Gender
+            </label>
+
+            <span
+                class="profile-value"
+                id="profileGenderText"
+            >
+                Male
+            </span>
+
+            <select
+                id="profileGenderInput"
+                class="profile-edit-input"
+                style="display:none;"
+            >
+
+                <option
+                    value="Male"
+                    id="genderMaleOption"
+                >
+                    Male
+                </option>
+
+                <option
+                    value="Female"
+                    id="genderFemaleOption"
+                >
+                    Female
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ==================================================
+             BIRTHDAY
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profileBirthdayInput"
+                id="profileBirthdayLabel"
+            >
+                Birthday
+            </label>
+
+            <span
+                class="profile-value"
+                id="profileBirthdayText"
+            >
+                January 1, 2000
+            </span>
+
+            <input
+                type="date"
+                id="profileBirthdayInput"
+                class="profile-edit-input"
+                style="display:none;"
+            >
+
+        </div>
+
+
+        <!-- ==================================================
+             CIVIL STATUS
+        ================================================== -->
+
+        <div class="profile-input">
+
+            <label
+                for="profileCivilStatusInput"
+                id="profileCivilStatusLabel"
+            >
+                Civil Status
+            </label>
+
+            <span
+                class="profile-value"
+                id="profileCivilStatusText"
+            >
+                Single
+            </span>
+
+            <select
+                id="profileCivilStatusInput"
+                class="profile-edit-input"
+                style="display:none;"
+            >
+
+                <option
+                    value="Single"
+                    id="civilSingleOption"
+                >
+                    Single
+                </option>
+
+                <option
+                    value="Married"
+                    id="civilMarriedOption"
+                >
+                    Married
+                </option>
+
+                <option
+                    value="Widowed"
+                    id="civilWidowedOption"
+                >
+                    Widowed
+                </option>
+
+                <option
+                    value="Separated"
+                    id="civilSeparatedOption"
+                >
+                    Separated
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+</section>
+
+   <!-- ==========================
+     MOBILE NAVIGATION
+=========================== -->
+
+<nav class="mobile-bottom-nav">
+
+    <button class="nav-btn active" data-page="dashboardPage">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span id="navHome">Home</span>
+
+    </button>
+
+    <button class="nav-btn" data-page="schedulePage">
+
+        <i class="fa-solid fa-calendar"></i>
+
+        <span id="navSchedule">Schedule</span>
+
+    </button>
+
+    <button class="nav-btn" data-page="historyPage">
+
+        <i class="fa-solid fa-clock-rotate-left"></i>
+
+        <span id="navHistory">History</span>
+
+    </button>
+
+    <button class="nav-btn" data-page="salaryPage">
+
+        <i class="fa-solid fa-yen-sign"></i>
+
+        <span id="navSalary">Salary</span>
+
+    </button>
+
+    <button class="nav-btn" data-page="reportsPage">
+
+        <i class="fa-solid fa-chart-column"></i>
+
+        <span id="navReports">Reports</span>
+
+    </button>
+
+    <button class="nav-btn" data-page="profilePage">
+
+        <i class="fa-solid fa-user"></i>
+
+        <span id="navProfile">Profile</span>
+
+    </button>
+
+</nav>
+
+</div>
+
+<!-- =======================================================
+    END OF MAIN APPLICATION
+======================================================= -->
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/app.js"></script>
+
+<!-- Authentication -->
+<script src="js/auth.js"></script>
+<script src="js/login.js"></script>
+<script src="js/register.js"></script>
+<script src="js/forgot.js"></script>
+
+<!-- Dashboard -->
+<script src="js/dashboard.js"></script>
+<script src="js/todaySchedule.js"></script>
+<script src="js/monthlyOverview.js"></script>
+<script src="js/recentSchedule.js"></script>
+
+<!-- Navigation -->
+<script src="js/navigation.js"></script>
+
+<!-- Pages -->
+<script src="js/schedule.js"></script>
+<script src="js/history.js"></script>
+<script src="js/salary.js"></script>
+
+<script src="js/export-monthly-data.js"></script>
+<script src="js/import-monthly-data.js"></script>
+<script src="js/pdf-reports.js"></script>
+<script src="js/change-password.js"></script>
+
+<script src="js/reports.js"></script>
+<script src="js/language.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/currency.js"></script>
+
+<!-- ==========================================================
+     END OF PAGE SCRIPTS
+========================================================== -->
+
+<!-- Splash (last) -->
+<script src="js/splash.js"></script>
+
+<!-- ==========================================================
+     YONAHA INTERIOR PWA
+========================================================== -->
+<script src="pwa/pwa.js"></script>
+
+</body>
+</html>
