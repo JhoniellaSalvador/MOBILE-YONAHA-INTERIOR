@@ -1083,17 +1083,12 @@
 }
 
 /* ==========================================================
-   iPHONE MAIN PAGES POSITION
+   iPHONE DASHBOARD POSITION
 ========================================================== */
 
 @media(max-width:768px){
 
-    #dashboardPage,
-    #schedulePage,
-    #historyPage,
-    #salaryPage,
-    #reportsPage,
-    #profilePage{
+    #dashboardPage{
 
         padding-top:40px;
 
