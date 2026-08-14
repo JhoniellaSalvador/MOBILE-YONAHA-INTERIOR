@@ -288,9 +288,11 @@ box-sizing:border-box;
 
     .schedule-header{
 
-        margin-bottom:18px;
+    margin-bottom:18px;
 
-    }
+    padding-top:24px;
+
+}
 
 
     .schedule-header h2{
