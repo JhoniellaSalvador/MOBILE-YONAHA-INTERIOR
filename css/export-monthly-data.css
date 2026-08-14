@@ -286,9 +286,11 @@
 
         position:relative;
 
-        top:32px;
+        top:0;
 
-        margin-bottom:24px;
+        transform:translateY(12px);
+
+        margin-bottom:36px;
 
     }
 
