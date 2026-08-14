@@ -284,7 +284,11 @@
 
     #exportMonthlyPage .export-monthly-header{
 
-        padding-top:48px;
+        position:relative;
+
+        top:24px;
+
+        margin-bottom:24px;
 
     }
 
