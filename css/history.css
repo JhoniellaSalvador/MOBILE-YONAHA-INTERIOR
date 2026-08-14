@@ -796,16 +796,16 @@
 @media(max-width:768px){
 
     #historyPage{
-        width:100%;
-        max-width:100%;
-        min-width:0;
+    width:100%;
+    max-width:100%;
+    min-width:0;
 
-        margin:0;
+    margin:0;
 
-        padding:20px 16px 100px 16px;
+    padding:44px 16px 100px 16px;
 
-        box-sizing:border-box;
-    }
+    box-sizing:border-box;
+}
 
     /* TITLE */
 
