@@ -975,7 +975,13 @@
     }
 
 
-    /* HEADER */
+        /* HEADER */
+
+    #salaryPage .schedule-header{
+
+        padding-top:20px;
+
+    }
 
     #salaryPage #salaryTitle {
         font-size: 22px;
