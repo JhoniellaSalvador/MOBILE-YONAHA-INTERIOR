@@ -277,16 +277,20 @@
 }
 
 /* ==========================================================
-   MOBILE HEADER POSITION
+   MOBILE EXPORT HEADER POSITION
 ========================================================== */
 
 @media (max-width:768px){
 
-    #exportMonthlyPage .export-monthly-header{
+    #exportMonthlyPage .profile-topbar.export-monthly-header{
 
-        margin-top:40px;
+        position:relative !important;
 
-        margin-bottom:24px;
+        top:40px !important;
+
+        margin-top:0 !important;
+
+        margin-bottom:64px !important;
 
     }
 
