@@ -809,9 +809,13 @@
 
     /* TITLE */
 
-    #historyPage .history-title{
-        margin-bottom:16px;
-    }
+   #historyPage .history-title{
+
+    margin-bottom:16px;
+
+    padding-top:20px;
+
+}
 
     #historyPage .history-title h2{
         font-size:24px;
