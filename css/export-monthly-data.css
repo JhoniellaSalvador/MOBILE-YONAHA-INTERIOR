@@ -282,15 +282,9 @@
 
 @media (max-width:768px){
 
-    #exportMonthlyPage .profile-topbar.export-monthly-header{
+    #exportMonthlyPage .export-monthly-header{
 
-        position:relative !important;
-
-        top:40px !important;
-
-        margin-top:0 !important;
-
-        margin-bottom:64px !important;
+        padding-top:36px;
 
     }
 
