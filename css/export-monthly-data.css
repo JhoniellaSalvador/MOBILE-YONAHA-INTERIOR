@@ -276,6 +276,19 @@
 
 }
 
+/* ==========================================================
+   MOBILE HEADER POSITION
+========================================================== */
+
+@media (max-width:768px){
+
+    #exportMonthlyPage .export-monthly-header{
+
+        padding-top:24px;
+
+    }
+
+}
 
 /* ==========================================================
    SMALL MOBILE SCREEN
