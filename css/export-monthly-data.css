@@ -284,13 +284,9 @@
 
     #exportMonthlyPage .export-monthly-header{
 
-        position:relative;
+        margin-top:40px;
 
-        top:0;
-
-        transform:translateY(12px);
-
-        margin-bottom:36px;
+        margin-bottom:24px;
 
     }
 
