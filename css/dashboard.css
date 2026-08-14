@@ -1081,3 +1081,23 @@
     }
 
 }
+
+/* ==========================================================
+   iPHONE / iOS SAFE AREA FIX
+========================================================== */
+
+@supports (-webkit-touch-callout: none){
+
+    @media(max-width:768px){
+
+        #dashboardPage{
+
+            padding-top:10px;
+
+            padding-bottom:90px;
+
+        }
+
+    }
+
+}
