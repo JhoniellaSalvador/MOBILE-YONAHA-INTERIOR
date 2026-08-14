@@ -1083,20 +1083,14 @@
 }
 
 /* ==========================================================
-   iPHONE / iOS SAFE AREA FIX
+   iPHONE DASHBOARD POSITION
 ========================================================== */
 
-@supports (-webkit-touch-callout: none){
+@media(max-width:768px){
 
-    @media(max-width:768px){
+    #dashboardPage{
 
-        #dashboardPage{
-
-            padding-top:10px;
-
-            padding-bottom:90px;
-
-        }
+        padding-top:40px;
 
     }
 
