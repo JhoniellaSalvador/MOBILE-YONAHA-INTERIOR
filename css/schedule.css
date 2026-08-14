@@ -3,16 +3,18 @@
 ========================================================== */
 
 #schedulePage{
-
-    padding:40px 16px 90px;
-
-    width:100%;
-
-    max-width:100%;
-
-    overflow-x:hidden;
-
-    box-sizing:border-box;
+   
+min-height:100vh;
+   
+background:#111111;
+   
+color:#FFFFFF;
+   
+padding:20px;
+   
+padding-bottom:90px;
+   
+box-sizing:border-box;
 
 }
 
@@ -271,19 +273,17 @@
 
     #schedulePage{
 
-        padding:16px;
+    padding:40px 16px 90px;
 
-        padding-bottom:90px;
+    width:100%;
 
-        width:100%;
+    max-width:100%;
 
-        max-width:100%;
+    overflow-x:hidden;
 
-        overflow-x:hidden;
+    box-sizing:border-box;
 
-        box-sizing:border-box;
-
-    }
+}
 
 
     .schedule-header{
