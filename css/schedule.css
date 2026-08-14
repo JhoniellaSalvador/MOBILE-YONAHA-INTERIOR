@@ -4,15 +4,13 @@
 
 #schedulePage{
 
-    min-height:100vh;
+    padding:40px 16px 90px;
 
-    background:#111111;
+    width:100%;
 
-    color:#FFFFFF;
+    max-width:100%;
 
-    padding:20px;
-
-    padding-bottom:90px;
+    overflow-x:hidden;
 
     box-sizing:border-box;
 
